@@ -1,0 +1,38 @@
+[
+  {
+    "id": "A-100",
+    "category": "sensor",
+    "price": 12800,
+    "stock": 12
+  },
+  {
+    "id": "A-110",
+    "category": "sensor",
+    "price": 9800,
+    "stock": 3
+  },
+  {
+    "id": "A-110",
+    "category": "sensor",
+    "price": 9900,
+    "stock": 5
+  },
+  {
+    "id": "B-200",
+    "category": "cable",
+    "price": 2400,
+    "stock": 40
+  },
+  {
+    "id": "",
+    "category": "cable",
+    "price": 1800,
+    "stock": 2
+  },
+  {
+    "id": "C-300",
+    "category": "hub",
+    "price": "6400",
+    "stock": "15"
+  }
+]
