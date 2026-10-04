@@ -1,0 +1,128 @@
+[
+  {
+    "id": "evt_0001",
+    "type": "order.updated",
+    "created_at": "2026-01-02T12:00:00Z",
+    "data": {
+      "id": "ORD-1001",
+      "status": "paid",
+      "amount_cents": 2050,
+      "currency": "USD",
+      "updated_at": "2026-01-02T12:00:00Z",
+      "version": 2,
+      "customer_ref": "CUST-101",
+      "items": [
+        {
+          "sku": "SKU-101",
+          "qty": 2,
+          "unit_cents": 1025
+        }
+      ]
+    }
+  },
+  {
+    "id": "evt_0001",
+    "type": "order.updated",
+    "created_at": "2026-01-02T12:00:00Z",
+    "data": {
+      "id": "ORD-1001",
+      "status": "paid",
+      "amount_cents": 2050,
+      "currency": "USD",
+      "updated_at": "2026-01-02T12:00:00Z",
+      "version": 2,
+      "customer_ref": "CUST-101",
+      "items": [
+        {
+          "sku": "SKU-101",
+          "qty": 2,
+          "unit_cents": 1025
+        }
+      ]
+    }
+  },
+  {
+    "id": "evt_0002",
+    "type": "order.updated",
+    "created_at": "2026-01-02T12:00:01Z",
+    "data": {
+      "id": "ORD-1001",
+      "status": "paid",
+      "amount_cents": 2050,
+      "currency": "USD",
+      "updated_at": "2026-01-02T12:00:00Z",
+      "version": 2,
+      "customer_ref": "CUST-101",
+      "items": [
+        {
+          "sku": "SKU-101",
+          "qty": 2,
+          "unit_cents": 1025
+        }
+      ]
+    }
+  },
+  {
+    "id": "evt_0003",
+    "type": "order.updated",
+    "created_at": "2026-01-02T12:05:00Z",
+    "data": {
+      "id": "ORD-1002",
+      "status": "paid",
+      "amount_cents": 3150,
+      "currency": "EUR",
+      "updated_at": "2026-01-01T00:30:00Z",
+      "version": 1,
+      "customer_ref": "CUST-102",
+      "items": [
+        {
+          "sku": "SKU-102",
+          "qty": 3,
+          "unit_cents": 1050
+        }
+      ]
+    }
+  },
+  {
+    "id": "evt_0004",
+    "type": "order.created",
+    "created_at": "2026-01-02T14:00:00Z",
+    "data": {
+      "id": "ORD-1025",
+      "status": "pending",
+      "amount_cents": 2500,
+      "currency": "USD",
+      "updated_at": "2026-01-02T14:00:00Z",
+      "version": 1,
+      "customer_ref": "CUST-225",
+      "items": [
+        {
+          "sku": "SKU-325",
+          "qty": 1,
+          "unit_cents": 2500
+        }
+      ]
+    }
+  },
+  {
+    "id": "evt_0005",
+    "type": "order.cancelled",
+    "created_at": "2026-01-02T13:00:00Z",
+    "data": {
+      "id": "ORD-1003",
+      "status": "cancelled",
+      "amount_cents": 1075,
+      "currency": "JPY",
+      "updated_at": "2026-01-02T13:00:00Z",
+      "version": 4,
+      "customer_ref": "CUST-103",
+      "items": [
+        {
+          "sku": "SKU-103",
+          "qty": 1,
+          "unit_cents": 1075
+        }
+      ]
+    }
+  }
+]

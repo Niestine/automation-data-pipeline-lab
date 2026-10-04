@@ -1,0 +1,30 @@
+[
+  {
+    "method": "GET",
+    "path": "/v1/orders",
+    "status": 503
+  },
+  {
+    "method": "GET",
+    "path": "/v1/orders",
+    "status": 429,
+    "headers": {
+      "Retry-After": "0"
+    }
+  },
+  {
+    "method": "GET",
+    "path": "/v1/orders",
+    "timeout": true
+  },
+  {
+    "method": "POST",
+    "path": "/v1/acks",
+    "status": 500
+  },
+  {
+    "method": "POST",
+    "path": "/v1/acks",
+    "lose_response": true
+  }
+]

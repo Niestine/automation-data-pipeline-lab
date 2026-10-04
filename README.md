@@ -21,4 +21,6 @@ The command writes normalized.json, normalized.csv, and summary.json.
 
 ## Portfolio Labs
 
+- **[API Integration Reliability Lab](projects/api-integration-reliability-lab/)** — Offline REST/webhook integration lab that paginates a local mock API, retries with backoff, validates schemas, writes idempotently, checkpoints progress, and recovers from mid-sync failure.
+
 - **[LLM Agent Evaluation & Guardrails Lab](projects/llm-agent-evaluation-lab/)** — Provider-neutral local simulation of an LLM agent pipeline with structured task contracts, deterministic fake-provider tests, validation, retries, evaluation metrics, and explicit safety/approval boundaries.
