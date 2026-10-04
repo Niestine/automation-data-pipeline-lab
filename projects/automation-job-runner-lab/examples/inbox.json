@@ -1,0 +1,179 @@
+[
+  {
+    "id": "REC-1001",
+    "kind": "invoice",
+    "status": "pending",
+    "amount_cents": 1250,
+    "updated_at": "2026-01-01T00:00:01Z",
+    "version": 1,
+    "payload": {
+      "lines": [
+        {
+          "desc": "line-1-a",
+          "cents": 1000
+        },
+        {
+          "desc": "line-1-b",
+          "cents": 250
+        }
+      ],
+      "currency": "USD"
+    }
+  },
+  {
+    "id": "REC-1002",
+    "kind": "ticket",
+    "status": "pending",
+    "updated_at": "2026-01-01T00:00:02Z",
+    "version": 1,
+    "payload": {
+      "queue": "support",
+      "priority": 3,
+      "summary": "synthetic ticket 2"
+    }
+  },
+  {
+    "id": "REC-1003",
+    "kind": "file_index",
+    "status": "ready",
+    "updated_at": "2026-01-01T00:00:03Z",
+    "version": 1,
+    "payload": {
+      "path": "inbox/file-03.txt",
+      "bytes": 300
+    }
+  },
+  {
+    "id": "REC-1004",
+    "kind": "report",
+    "status": "ready",
+    "updated_at": "2026-01-01T00:00:04Z",
+    "version": 1,
+    "payload": {
+      "title": "Weekly 4",
+      "pages": 2
+    }
+  },
+  {
+    "id": "REC-1005",
+    "kind": "invoice",
+    "status": "pending",
+    "amount_cents": 5250,
+    "updated_at": "2026-01-01T00:00:05Z",
+    "version": 1,
+    "payload": {
+      "lines": [
+        {
+          "desc": "line-5-a",
+          "cents": 5000
+        },
+        {
+          "desc": "line-5-b",
+          "cents": 250
+        }
+      ],
+      "currency": "USD"
+    }
+  },
+  {
+    "id": "REC-1006",
+    "kind": "ticket",
+    "status": "pending",
+    "updated_at": "2026-01-01T00:00:06Z",
+    "version": 1,
+    "payload": {
+      "queue": "billing",
+      "priority": 2,
+      "summary": "synthetic ticket 6"
+    }
+  },
+  {
+    "id": "REC-1007",
+    "kind": "file_index",
+    "status": "ready",
+    "updated_at": "2026-01-01T00:00:07Z",
+    "version": 1,
+    "payload": {
+      "path": "inbox/file-07.txt",
+      "bytes": 700
+    }
+  },
+  {
+    "id": "REC-1008",
+    "kind": "report",
+    "status": "ready",
+    "updated_at": "2026-01-01T00:00:08Z",
+    "version": 1,
+    "payload": {
+      "title": "Weekly 8",
+      "pages": 3
+    }
+  },
+  {
+    "id": "REC-1009",
+    "kind": "invoice",
+    "status": "pending",
+    "amount_cents": 9250,
+    "updated_at": "2026-01-01T00:00:09Z",
+    "version": 1,
+    "payload": {
+      "lines": [
+        {
+          "desc": "line-9-a",
+          "cents": 9000
+        },
+        {
+          "desc": "line-9-b",
+          "cents": 250
+        }
+      ],
+      "currency": "USD"
+    }
+  },
+  {
+    "id": "REC-1010",
+    "kind": "ticket",
+    "status": "pending",
+    "updated_at": "2026-01-01T00:00:10Z",
+    "version": 1,
+    "payload": {
+      "queue": "ops",
+      "priority": 1,
+      "summary": "synthetic ticket 10"
+    }
+  },
+  {
+    "id": "REC-1098",
+    "kind": "ticket",
+    "status": "pending",
+    "updated_at": "2026-01-01T00:00:58Z",
+    "version": 1,
+    "payload": {
+      "queue": "support",
+      "priority": 4,
+      "summary": "synthetic ticket 98"
+    },
+    "internal_note": "poison-extra-field"
+  },
+  {
+    "id": "REC-1099",
+    "kind": "invoice",
+    "status": "pending",
+    "amount_cents": 99999,
+    "updated_at": "2026-01-01T00:00:59Z",
+    "version": 1,
+    "payload": {
+      "lines": [
+        {
+          "desc": "line-99-a",
+          "cents": 99000
+        },
+        {
+          "desc": "line-99-b",
+          "cents": 250
+        }
+      ],
+      "currency": "USD"
+    }
+  }
+]

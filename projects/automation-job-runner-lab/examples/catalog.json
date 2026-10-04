@@ -1,0 +1,146 @@
+{
+  "pipeline": "hourly-ops",
+  "window_ms": 3600000,
+  "jobs": [
+    {
+      "id": "ingest-inbox",
+      "handler": "ingest",
+      "schedule": {
+        "every_ms": 3600000,
+        "offset_ms": 0
+      },
+      "retry": {
+        "max_attempts": 4,
+        "base_delay_ms": 10,
+        "max_delay_ms": 200,
+        "multiplier": 2.0,
+        "jitter_ms": 3
+      },
+      "timeout_ms": 5000,
+      "depends_on": [],
+      "idempotency": {
+        "mode": "window"
+      },
+      "params": {
+        "source": "inbox",
+        "dest": "staging"
+      }
+    },
+    {
+      "id": "transform-records",
+      "handler": "transform",
+      "schedule": {},
+      "retry": {
+        "max_attempts": 4,
+        "base_delay_ms": 10,
+        "max_delay_ms": 200,
+        "multiplier": 2.0,
+        "jitter_ms": 3
+      },
+      "timeout_ms": 5000,
+      "depends_on": [
+        "ingest-inbox"
+      ],
+      "idempotency": {
+        "mode": "input_hash"
+      },
+      "params": {
+        "source": "staging",
+        "dest": "clean",
+        "dead_letter": "dead_letter"
+      }
+    },
+    {
+      "id": "export-report",
+      "handler": "export",
+      "schedule": {},
+      "retry": {
+        "max_attempts": 4,
+        "base_delay_ms": 10,
+        "max_delay_ms": 200,
+        "multiplier": 2.0,
+        "jitter_ms": 3
+      },
+      "timeout_ms": 5000,
+      "depends_on": [
+        "transform-records"
+      ],
+      "idempotency": {
+        "mode": "window"
+      },
+      "params": {
+        "source": "clean",
+        "dest": "exports",
+        "name_template": "report-{window}.json"
+      }
+    },
+    {
+      "id": "notify-ops",
+      "handler": "notify",
+      "schedule": {},
+      "retry": {
+        "max_attempts": 4,
+        "base_delay_ms": 10,
+        "max_delay_ms": 200,
+        "multiplier": 2.0,
+        "jitter_ms": 3
+      },
+      "timeout_ms": 5000,
+      "depends_on": [
+        "export-report"
+      ],
+      "idempotency": {
+        "mode": "run"
+      },
+      "params": {
+        "channel": "ops",
+        "export_bucket": "exports",
+        "name_template": "report-{window}.json"
+      }
+    },
+    {
+      "id": "cleanup-inbox",
+      "handler": "cleanup",
+      "schedule": {},
+      "retry": {
+        "max_attempts": 4,
+        "base_delay_ms": 10,
+        "max_delay_ms": 200,
+        "multiplier": 2.0,
+        "jitter_ms": 3
+      },
+      "timeout_ms": 5000,
+      "depends_on": [
+        "export-report"
+      ],
+      "idempotency": {
+        "mode": "window"
+      },
+      "params": {
+        "inbox": "inbox",
+        "clean": "clean",
+        "archive": "archive"
+      }
+    },
+    {
+      "id": "heartbeat-log",
+      "handler": "heartbeat",
+      "schedule": {
+        "cron_minute": 0
+      },
+      "retry": {
+        "max_attempts": 4,
+        "base_delay_ms": 10,
+        "max_delay_ms": 200,
+        "multiplier": 2.0,
+        "jitter_ms": 3
+      },
+      "timeout_ms": 1000,
+      "depends_on": [],
+      "idempotency": {
+        "mode": "window"
+      },
+      "params": {}
+    }
+  ]
+}
