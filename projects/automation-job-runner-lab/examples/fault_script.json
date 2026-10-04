@@ -1,0 +1,12 @@
+[
+  {
+    "job_id": "ingest-inbox",
+    "attempt": 1,
+    "error": "timeout"
+  },
+  {
+    "job_id": "transform-records",
+    "attempt": 1,
+    "error": "transient_io"
+  }
+]

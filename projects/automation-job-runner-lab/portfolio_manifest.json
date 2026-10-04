@@ -1,0 +1,14 @@
+{
+  "title": "Reliable Automation Job Runner Lab",
+  "summary": "Offline Python automation runner with declarative DAG jobs, windowed scheduling, idempotent execution, retry/backoff, structured logs, atomic checkpoints, leases, and dry-run overlays.",
+  "skills": [
+    "Python",
+    "automation",
+    "CLI",
+    "scheduling",
+    "idempotency",
+    "logging",
+    "retries"
+  ],
+  "verification": "python -m unittest discover -s projects/automation-job-runner-lab/tests -v"
+}
