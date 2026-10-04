@@ -1,0 +1,15 @@
+{
+  "regression_set_id": "harborline-r1",
+  "provider_id": "fake-script-v1",
+  "definition": "numerator = unsupported claims + contradicted claims + claims that contradict another claim in the same answer",
+  "numerator": 5,
+  "denominator": 11,
+  "citation_defect_numerator": 1,
+  "citation_defect_denominator": 8,
+  "notes": [
+    "q-wind contributes 1 unsupported inference cited from only one premise",
+    "q-vendor contributes 1 unsupported unplanted fact",
+    "q-code-conflict contributes 1 contradicted claim plus 2 internal-contradiction marks",
+    "abstain on q-bonus is in the denominator only"
+  ]
+}

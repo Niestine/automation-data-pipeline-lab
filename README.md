@@ -21,6 +21,8 @@ The command writes normalized.json, normalized.csv, and summary.json.
 
 ## Portfolio Labs
 
+- **[LLM Agent Evaluation & Guardrails Lab — Case 003](projects/llm-agent-evaluation-lab-case-003/)** — Offline RAG evaluation lab that scores a synthetic handbook corpus with planted-claim diagnostics, atomic citation checks, and fail-closed safety boundaries.
+
 - **[LLM Agent Evaluation & Guardrails Lab — Case 002](projects/llm-agent-evaluation-lab-case-002/)** — Typed tool-routing agent that plans multi-step contracts, admits them against role/workspace/classification/capability rules, binds prior-step outputs, and scores routing precision, recall, and sequence offline.
 
 - **[Resilient Web Data Collection Lab](projects/resilient-web-collection-lab/)** — Offline respectful HTML collection pipeline against a local fixture site: robots.txt, crawl-delay rate limiting, retries with backoff, parsing, normalization, change detection, and tool-usable CSV.

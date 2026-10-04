@@ -1,0 +1,12 @@
+{
+  "floor": 0.51,
+  "weights": [0.0, 0.5, 1.0],
+  "examples": [
+    {"id": "fact-a", "label": "fact_single", "lexical": 0.05, "dense": 0.95},
+    {"id": "fact-b", "label": "fact_single", "lexical": 0.05, "dense": 0.95},
+    {"id": "sum-a", "label": "summary", "lexical": 0.05, "dense": 0.95},
+    {"id": "sum-b", "label": "summary", "lexical": 0.05, "dense": 0.95},
+    {"id": "reason-a", "label": "reasoning", "lexical": 0.95, "dense": 0.05},
+    {"id": "reason-b", "label": "reasoning", "lexical": 0.95, "dense": 0.05}
+  ]
+}

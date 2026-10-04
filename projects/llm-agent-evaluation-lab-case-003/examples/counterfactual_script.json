@@ -1,0 +1,18 @@
+{
+  "adopt": {
+    "schema_version": "cited_answer_v1",
+    "item_id": "q-radio-cf",
+    "surface_text": "The yard radio channel is channel 9.",
+    "reverse_questions": ["Which channel is the yard radio?"],
+    "claims": [
+      {
+        "claim_id": "F-RADIO-9",
+        "text": "The yard radio channel is channel 9.",
+        "kind": "fact",
+        "support": "supported",
+        "citations": [{"chunk_id": "ch-radio-cf", "substring": "channel 9"}],
+        "fallback": null
+      }
+    ]
+  }
+}
