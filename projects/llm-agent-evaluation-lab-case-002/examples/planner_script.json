@@ -1,0 +1,300 @@
+{
+  "P-2001": [
+    {
+      "plan": {
+        "schema": "tool_plan_v1",
+        "goal_kind": "lookup",
+        "confidence": 0.91,
+        "budget_tokens": 20,
+        "needs_human": false,
+        "steps": [
+          {
+            "id": "s1",
+            "tool": "catalog.search",
+            "args": {"query": "weekly recap", "limit": 3},
+            "bind": {}
+          }
+        ],
+        "rationale": "heuristic:lookup"
+      }
+    }
+  ],
+  "P-2002": [
+    {
+      "plan": {
+        "schema": "tool_plan_v1",
+        "goal_kind": "research_brief",
+        "confidence": 0.91,
+        "budget_tokens": 125,
+        "needs_human": false,
+        "steps": [
+          {
+            "id": "s1",
+            "tool": "catalog.get",
+            "args": {"asset_id": "AST-101"},
+            "bind": {}
+          },
+          {
+            "id": "s2",
+            "tool": "kb.get",
+            "args": {"note_id": "NOTE-10"},
+            "bind": {}
+          },
+          {
+            "id": "s3",
+            "tool": "draft.compose",
+            "args": {
+              "title": "Recap brief",
+              "source_ids": ["AST-101"],
+              "notes": "from AST-101"
+            },
+            "bind": {}
+          },
+          {
+            "id": "s4",
+            "tool": "draft.cite",
+            "args": {"note_id": "NOTE-10"},
+            "bind": {"draft_id": "$s3.draft_id"}
+          },
+          {
+            "id": "s5",
+            "tool": "review.submit",
+            "args": {},
+            "bind": {"draft_id": "$s3.draft_id"}
+          }
+        ],
+        "rationale": "heuristic:research_brief"
+      }
+    }
+  ],
+  "P-2003": [
+    {
+      "plan": {
+        "schema": "tool_plan_v1",
+        "goal_kind": "publish",
+        "confidence": 0.91,
+        "budget_tokens": 125,
+        "needs_human": false,
+        "steps": [
+          {
+            "id": "s1",
+            "tool": "catalog.get",
+            "args": {"asset_id": "AST-101"},
+            "bind": {}
+          },
+          {
+            "id": "s2",
+            "tool": "draft.compose",
+            "args": {
+              "title": "Recap brief",
+              "source_ids": ["AST-101"],
+              "notes": "from AST-101"
+            },
+            "bind": {}
+          },
+          {
+            "id": "s3",
+            "tool": "review.submit",
+            "args": {},
+            "bind": {"draft_id": "$s2.draft_id"}
+          },
+          {
+            "id": "s4",
+            "tool": "publish.queue",
+            "args": {},
+            "bind": {"draft_id": "$s2.draft_id"}
+          }
+        ],
+        "rationale": "heuristic:publish"
+      }
+    }
+  ],
+  "P-2004": [
+    {
+      "plan": {
+        "schema": "tool_plan_v1",
+        "goal_kind": "research_brief",
+        "confidence": 0.91,
+        "budget_tokens": 90,
+        "needs_human": false,
+        "steps": [
+          {
+            "id": "s1",
+            "tool": "catalog.get",
+            "args": {"asset_id": "AST-101"},
+            "bind": {}
+          },
+          {
+            "id": "s2",
+            "tool": "draft.compose",
+            "args": {
+              "title": "Recap brief",
+              "source_ids": ["AST-101"],
+              "notes": "from AST-101"
+            },
+            "bind": {}
+          }
+        ],
+        "rationale": "heuristic:research_brief"
+      }
+    }
+  ],
+  "P-2005": [
+    {
+      "plan": {
+        "schema": "tool_plan_v1",
+        "goal_kind": "publish",
+        "confidence": 0.91,
+        "budget_tokens": 125,
+        "needs_human": false,
+        "steps": [
+          {
+            "id": "s1",
+            "tool": "catalog.get",
+            "args": {"asset_id": "AST-103"},
+            "bind": {}
+          },
+          {
+            "id": "s2",
+            "tool": "draft.compose",
+            "args": {
+              "title": "Recap brief",
+              "source_ids": ["AST-103"],
+              "notes": "from AST-103"
+            },
+            "bind": {}
+          },
+          {
+            "id": "s3",
+            "tool": "review.submit",
+            "args": {},
+            "bind": {"draft_id": "$s2.draft_id"}
+          },
+          {
+            "id": "s4",
+            "tool": "publish.queue",
+            "args": {},
+            "bind": {"draft_id": "$s2.draft_id"}
+          }
+        ],
+        "rationale": "heuristic:publish"
+      }
+    }
+  ],
+  "P-2006": [
+    {
+      "plan": {
+        "schema": "tool_plan_v1",
+        "goal_kind": "refuse",
+        "confidence": 0.91,
+        "budget_tokens": 5,
+        "needs_human": false,
+        "steps": [
+          {
+            "id": "s1",
+            "tool": "refuse",
+            "args": {"reason": "blocked before planner"},
+            "bind": {}
+          }
+        ],
+        "rationale": "heuristic:refuse"
+      }
+    }
+  ],
+  "P-2007": [
+    {
+      "plan": {
+        "schema": "tool_plan_v1",
+        "goal_kind": "refuse",
+        "confidence": 0.91,
+        "budget_tokens": 5,
+        "needs_human": false,
+        "steps": [
+          {
+            "id": "s1",
+            "tool": "refuse",
+            "args": {"reason": "blocked before planner"},
+            "bind": {}
+          }
+        ],
+        "rationale": "heuristic:refuse"
+      }
+    }
+  ],
+  "P-2008": [
+    {
+      "plan": {
+        "schema": "tool_plan_v1",
+        "goal_kind": "lookup",
+        "confidence": 0.91,
+        "budget_tokens": 10,
+        "needs_human": false,
+        "steps": [
+          {
+            "id": "s1",
+            "tool": "catalog.get",
+            "args": {"asset_id": "AST-999"},
+            "bind": {}
+          }
+        ],
+        "rationale": "heuristic:lookup"
+      }
+    }
+  ],
+  "P-2009": [
+    {
+      "plan": {
+        "schema": "tool_plan_v1",
+        "goal_kind": "lookup",
+        "confidence": 0.91,
+        "budget_tokens": 10,
+        "needs_human": false,
+        "steps": [
+          {
+            "id": "s1",
+            "tool": "catalog.get",
+            "args": {"asset_id": "AST-103"},
+            "bind": {}
+          }
+        ],
+        "rationale": "heuristic:lookup"
+      }
+    }
+  ],
+  "P-2010": [
+    {
+      "plan": {
+        "schema": "tool_plan_v1",
+        "goal_kind": "schedule",
+        "confidence": 0.91,
+        "budget_tokens": 100,
+        "needs_human": false,
+        "steps": [
+          {
+            "id": "s1",
+            "tool": "catalog.get",
+            "args": {"asset_id": "AST-101"},
+            "bind": {}
+          },
+          {
+            "id": "s2",
+            "tool": "draft.compose",
+            "args": {
+              "title": "Recap brief",
+              "source_ids": ["AST-101"],
+              "notes": "from AST-101"
+            },
+            "bind": {}
+          },
+          {
+            "id": "s3",
+            "tool": "calendar.hold",
+            "args": {"slot_id": "SLOT-A"},
+            "bind": {"draft_id": "$s2.draft_id"}
+          }
+        ],
+        "rationale": "heuristic:schedule"
+      }
+    }
+  ]
+}
