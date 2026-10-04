@@ -1,0 +1,17 @@
+{
+  "ORD-100": {
+    "status": "shipped",
+    "assignee": "ops-1",
+    "queue": "fulfillment"
+  },
+  "ORD-200": {
+    "status": "pending",
+    "assignee": "ops-2",
+    "queue": "fulfillment"
+  },
+  "ORD-300": {
+    "status": "blocked",
+    "assignee": "ops-1",
+    "queue": "exceptions"
+  }
+}

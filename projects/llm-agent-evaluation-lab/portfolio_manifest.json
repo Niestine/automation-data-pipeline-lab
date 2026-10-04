@@ -1,0 +1,13 @@
+{
+  "title": "LLM Agent Evaluation & Guardrails Lab",
+  "summary": "Provider-neutral local simulation of an LLM agent pipeline with structured task contracts, deterministic fake-provider tests, validation, retries, evaluation metrics, and explicit safety/approval boundaries.",
+  "skills": [
+    "LLM",
+    "agents",
+    "evaluation",
+    "structured outputs",
+    "guardrails",
+    "testing"
+  ],
+  "verification": "python -m unittest discover -s projects/llm-agent-evaluation-lab/tests -v"
+}
