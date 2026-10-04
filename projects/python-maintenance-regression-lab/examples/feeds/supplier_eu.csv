@@ -1,0 +1,4 @@
+# version=v1 currency=EUR delimiter=;
+sku;product_name;price;qty;active;image;updated_at
+EU-3001;Linen Shirt;14,90;6;true;https://cdn.example.test/eu-3001.png;2026-01-02
+EU-3002;Wool Coat;199,00;1;true;https://cdn.example.test/eu-3002.png;2026-01-02

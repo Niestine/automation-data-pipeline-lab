@@ -1,0 +1,11 @@
+# version=v1 currency=USD
+sku,product_name,price,qty,active,image,updated_at,notes
+SKU-1001,Widget Alpha,21.50,12,true,https://cdn.example.test/sku-1001.png,2026-01-02T00:00:00Z,price bump
+SKU-1002,Widget Beta,25.00,,true,https://cdn.example.test/sku-1002.png,2026-01-02T00:00:00Z,qty omitted
+SKU-1003,"Widget, Gamma",9.99,4,yes,https://cdn.example.test/sku-1003.png,2026-01-02,quoted comma
+sku-1003,WIDGET GAMMA DUP,9.99,4,true,https://cdn.example.test/sku-1003.png,2026-01-02,case-fold conflict
+SKU-1004,Widget Delta,5.00,0,false,https://cdn.example.test/sku-1004.png,2026-01-03,discontinued
+XX,too short,1.00,1,true,https://cdn.example.test/x.png,2026-01-02,invalid sku
+SKU-1005,Bad Image,3.00,1,true,./relative.png,2026-01-02,relative image
+SKU-1006,US Date,4.00,1,true,https://cdn.example.test/x.png,01/07/2026,slash date
+SKU-1007,Truthy False,8.00,2,false,https://cdn.example.test/x.png,2026-01-02,string false
