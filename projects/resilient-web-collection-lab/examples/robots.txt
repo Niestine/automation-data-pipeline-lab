@@ -1,0 +1,11 @@
+# Synthetic fixture robots. No live site is contacted.
+User-agent: *
+Disallow: /admin/
+Crawl-delay: 0
+
+User-agent: LabCollector
+Allow: /catalog
+Allow: /products/
+Allow: /images/
+Disallow: /private/
+Crawl-delay: 1

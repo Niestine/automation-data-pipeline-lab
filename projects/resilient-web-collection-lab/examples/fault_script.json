@@ -1,0 +1,20 @@
+[
+  {
+    "method": "GET",
+    "path": "/robots.txt",
+    "status": 503
+  },
+  {
+    "method": "GET",
+    "path": "/catalog",
+    "status": 429,
+    "headers": {
+      "Retry-After": "0"
+    }
+  },
+  {
+    "method": "GET",
+    "path": "/products/sku-1001",
+    "timeout": true
+  }
+]

@@ -1,0 +1,64 @@
+{
+  "origin": "https://fixture.example.invalid",
+  "collected_at": "2025-12-28T12:00:00Z",
+  "job_id": "lab-collect-previous",
+  "products": [
+    {
+      "sku": "SKU-1001",
+      "title": "Linen Shirt",
+      "price_cents": 2800,
+      "currency": "USD",
+      "availability": "in_stock",
+      "color": "navy",
+      "size": "M",
+      "image_url": "https://fixture.example.invalid/images/sku-1001.jpg",
+      "source_url": "https://fixture.example.invalid/products/sku-1001",
+      "content_hash": "a4c0e034efa6aac7e3c1b7668499ec7d475ae872dfecbf1488e0d3e208b7eac3",
+      "collected_at": "2025-12-28T12:00:00Z",
+      "description": "Breathable & durable. Machine wash."
+    },
+    {
+      "sku": "SKU-1002",
+      "title": "Wool Coat, Lined",
+      "price_cents": 14900,
+      "currency": "USD",
+      "availability": "in_stock",
+      "color": "charcoal",
+      "size": "L",
+      "image_url": "https://fixture.example.invalid/images/sku-1002.jpg",
+      "source_url": "https://fixture.example.invalid/products/sku-1002",
+      "content_hash": "a3b2adddbb8a6bbee5eb9e9c733cefe96f938d3b520fa837257a3a3ac1932ae9",
+      "collected_at": "2025-12-28T12:00:00Z",
+      "description": "Double-breasted winter coat."
+    },
+    {
+      "sku": "SKU-1005",
+      "title": "Denim Jacket",
+      "price_cents": 8900,
+      "currency": "USD",
+      "availability": "in_stock",
+      "color": "indigo",
+      "size": "M",
+      "image_url": "https://fixture.example.invalid/images/sku-1005.jpg",
+      "source_url": "https://fixture.example.invalid/products/sku-1005",
+      "content_hash": "596c6859349191c3239c40f5fd528904c1ddad93ec8a6dbca825f9d56cb302ab",
+      "collected_at": "2025-12-28T12:00:00Z",
+      "description": "Washed indigo denim."
+    },
+    {
+      "sku": "SKU-OLD1",
+      "title": "Retired Parka",
+      "price_cents": 9900,
+      "currency": "USD",
+      "availability": "discontinued",
+      "color": "olive",
+      "size": "L",
+      "image_url": "https://fixture.example.invalid/images/sku-old1.jpg",
+      "source_url": "https://fixture.example.invalid/products/sku-old1",
+      "content_hash": "983a18f50af9d4564a920f7e096a5123d9fd201a4d1253deb7bd6e4f75001186",
+      "collected_at": "2025-12-28T12:00:00Z",
+      "description": "No longer listed."
+    }
+  ],
+  "etags": {}
+}

@@ -21,6 +21,8 @@ The command writes normalized.json, normalized.csv, and summary.json.
 
 ## Portfolio Labs
 
+- **[Resilient Web Data Collection Lab](projects/resilient-web-collection-lab/)** — Offline respectful HTML collection pipeline against a local fixture site: robots.txt, crawl-delay rate limiting, retries with backoff, parsing, normalization, change detection, and tool-usable CSV.
+
 - **[Python Maintenance & Regression Lab](projects/python-maintenance-regression-lab/)** — Offline layered catalog-ingest service that decodes mixed encodings, adapts v1/v2 feeds, applies versioned SKU updates, and locks sixteen historical defects behind deterministic regression tests.
 
 - **[Reliable Automation Job Runner Lab](projects/automation-job-runner-lab/)** — Offline Python automation runner with declarative DAG jobs, windowed scheduling, idempotent execution, retry/backoff, structured logs, atomic checkpoints, leases, and dry-run overlays.

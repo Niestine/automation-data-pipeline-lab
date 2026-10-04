@@ -1,0 +1,13 @@
+{
+  "title": "Resilient Web Data Collection Lab",
+  "summary": "Offline respectful HTML collection pipeline against a local fixture site: robots.txt, crawl-delay rate limiting, retries with backoff, parsing, normalization, change detection, and tool-usable CSV.",
+  "skills": [
+    "Python",
+    "web data collection",
+    "rate limiting",
+    "retries",
+    "normalization",
+    "testing"
+  ],
+  "verification": "python -m unittest discover -s projects/resilient-web-collection-lab/tests -v"
+}
