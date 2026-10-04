@@ -21,6 +21,8 @@ The command writes normalized.json, normalized.csv, and summary.json.
 
 ## Portfolio Labs
 
+- **[Python Maintenance & Regression Lab — Case 002](projects/python-maintenance-regression-lab-case-002/)** — Offline SLIP lane-card lab that freezes a legacy parser, classifies every corpus blob against a hardened twin, and gates changes with a disposition ledger, metamorphic follow-ups, grammar splices, and shortlex shrinks.
+
 - **[LLM Agent Evaluation & Guardrails Lab — Case 003](projects/llm-agent-evaluation-lab-case-003/)** — Offline RAG evaluation lab that scores a synthetic handbook corpus with planted-claim diagnostics, atomic citation checks, and fail-closed safety boundaries.
 
 - **[LLM Agent Evaluation & Guardrails Lab — Case 002](projects/llm-agent-evaluation-lab-case-002/)** — Typed tool-routing agent that plans multi-step contracts, admits them against role/workspace/classification/capability rules, binds prior-step outputs, and scores routing precision, recall, and sequence offline.
