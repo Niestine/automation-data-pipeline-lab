@@ -1,0 +1,44 @@
+{
+  "T-1001": [
+    {
+      "latency_ms": 4,
+      "text": "{\"intent\":\"status_lookup\",\"confidence\":0.91,\"entities\":{\"record_id\":\"ORD-100\"},\"proposed_action\":\"lookup_record\",\"action_args\":{\"record_id\":\"ORD-100\"},\"rationale\":\"Requester asked for order status.\",\"needs_human\":false}"
+    }
+  ],
+  "T-1002": [
+    {
+      "latency_ms": 3,
+      "text": "{\"intent\":\"summarize\",\"confidence\":0.88,\"entities\":{\"record_id\":\"ORD-300\"},\"proposed_action\":\"summarize\",\"action_args\":{\"summary\":\"Exception notes for ORD-300\",\"record_id\":\"ORD-300\"},\"rationale\":\"Requester asked for a summary.\",\"needs_human\":false}"
+    }
+  ],
+  "T-1003": [
+    {
+      "latency_ms": 5,
+      "text": "{\"intent\":\"record_update\",\"confidence\":0.9,\"entities\":{\"record_id\":\"ORD-200\"},\"proposed_action\":\"update_record\",\"action_args\":{\"record_id\":\"ORD-200\",\"fields\":{\"status\":\"shipped\"}},\"rationale\":\"Requester asked to change order status.\",\"needs_human\":true}"
+    }
+  ],
+  "T-1004": [
+    {
+      "latency_ms": 5,
+      "text": "{\"intent\":\"record_update\",\"confidence\":0.9,\"entities\":{\"record_id\":\"ORD-200\"},\"proposed_action\":\"update_record\",\"action_args\":{\"record_id\":\"ORD-200\",\"fields\":{\"status\":\"shipped\"}},\"rationale\":\"Requester asked to change order status.\",\"needs_human\":true}"
+    }
+  ],
+  "T-1007": [
+    {
+      "latency_ms": 2,
+      "text": "{\"intent\":\"escalate\",\"confidence\":0.93,\"entities\":{\"record_id\":\"ORD-300\"},\"proposed_action\":\"escalate\",\"action_args\":{\"record_id\":\"ORD-300\",\"queue\":\"ops-leads\"},\"rationale\":\"Requester asked to escalate to a manager.\",\"needs_human\":false}"
+    }
+  ],
+  "T-1008": [
+    {
+      "latency_ms": 6,
+      "text": "{\"intent\":\"data_export\",\"confidence\":0.87,\"entities\":{},\"proposed_action\":\"export_data\",\"action_args\":{\"scope\":\"aggregate_counts\"},\"rationale\":\"Requester asked for aggregate counts only.\",\"needs_human\":true}"
+    }
+  ],
+  "T-1009": [
+    {
+      "latency_ms": 3,
+      "text": "{\"intent\":\"status_lookup\",\"confidence\":0.8,\"entities\":{\"record_id\":\"ORD-999\"},\"proposed_action\":\"lookup_record\",\"action_args\":{\"record_id\":\"ORD-999\"},\"rationale\":\"Requester asked to look up a missing order.\",\"needs_human\":false}"
+    }
+  ]
+}

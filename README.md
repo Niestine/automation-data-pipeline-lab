@@ -18,3 +18,7 @@ The included data is synthetic. No client data or secrets are stored in this rep
 Run: python pipeline.py sample_input.json output
 
 The command writes normalized.json, normalized.csv, and summary.json.
+
+## Portfolio Labs
+
+- **[LLM Agent Evaluation & Guardrails Lab](projects/llm-agent-evaluation-lab/)** — Provider-neutral local simulation of an LLM agent pipeline with structured task contracts, deterministic fake-provider tests, validation, retries, evaluation metrics, and explicit safety/approval boundaries.

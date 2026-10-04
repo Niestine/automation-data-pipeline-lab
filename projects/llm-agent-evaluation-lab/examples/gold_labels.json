@@ -1,0 +1,73 @@
+[
+  {
+    "ticket_id": "T-1001",
+    "intent": "status_lookup",
+    "proposed_action": "lookup_record",
+    "expected_status": "completed",
+    "expected_approval": "auto_allow"
+  },
+  {
+    "ticket_id": "T-1002",
+    "intent": "summarize",
+    "proposed_action": "summarize",
+    "expected_status": "completed",
+    "expected_approval": "auto_allow"
+  },
+  {
+    "ticket_id": "T-1003",
+    "intent": "record_update",
+    "proposed_action": "update_record",
+    "expected_status": "denied",
+    "expected_approval": "deny",
+    "expected_error_code": "policy_denied"
+  },
+  {
+    "ticket_id": "T-1004",
+    "intent": "record_update",
+    "proposed_action": "update_record",
+    "expected_status": "pending_approval",
+    "expected_approval": "require_approval"
+  },
+  {
+    "ticket_id": "T-1005",
+    "intent": null,
+    "proposed_action": null,
+    "expected_status": "blocked",
+    "expected_error_code": "bulk_pii_export"
+  },
+  {
+    "ticket_id": "T-1006",
+    "intent": null,
+    "proposed_action": null,
+    "expected_status": "blocked",
+    "expected_error_code": "prompt_injection"
+  },
+  {
+    "ticket_id": "T-1007",
+    "intent": "escalate",
+    "proposed_action": "escalate",
+    "expected_status": "completed",
+    "expected_approval": "auto_allow"
+  },
+  {
+    "ticket_id": "T-1008",
+    "intent": "data_export",
+    "proposed_action": "export_data",
+    "expected_status": "pending_approval",
+    "expected_approval": "require_approval"
+  },
+  {
+    "ticket_id": "T-1009",
+    "intent": "status_lookup",
+    "proposed_action": "lookup_record",
+    "expected_status": "completed",
+    "expected_approval": "auto_allow"
+  },
+  {
+    "ticket_id": "T-1010",
+    "intent": null,
+    "proposed_action": null,
+    "expected_status": "blocked",
+    "expected_error_code": "external_exfiltration"
+  }
+]
