@@ -1,0 +1,14 @@
+{
+  "title": "API Integration Reliability Lab",
+  "summary": "Offline REST/webhook integration lab that paginates a local mock API, retries with backoff, validates schemas, writes idempotently, checkpoints progress, and recovers from mid-sync failure.",
+  "skills": [
+    "Python",
+    "REST API",
+    "webhooks",
+    "retries",
+    "pagination",
+    "idempotency",
+    "testing"
+  ],
+  "verification": "python -m unittest discover -s projects/api-integration-reliability-lab/tests -v"
+}
