@@ -1,0 +1,4 @@
+# version=v1 currency=USD
+sku,product_name,price,qty,active,image,updated_at
+SKU-9001,"Line one
+Line two",11.00,1,true,https://cdn.example.test/sku-9001.png,2026-01-02

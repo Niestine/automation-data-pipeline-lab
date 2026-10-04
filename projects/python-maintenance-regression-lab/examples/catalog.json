@@ -1,0 +1,52 @@
+{
+  "products": [
+    {
+      "sku": "SKU-1001",
+      "title": "Widget Alpha",
+      "price_cents": 1999,
+      "currency": "USD",
+      "stock": 10,
+      "active": true,
+      "image_url": "https://cdn.example.test/sku-1001.png",
+      "version": 1,
+      "updated_at_ms": 1765756800000,
+      "source_version": "v2"
+    },
+    {
+      "sku": "SKU-1002",
+      "title": "Widget Beta",
+      "price_cents": 2500,
+      "currency": "USD",
+      "stock": 5,
+      "active": true,
+      "image_url": "https://cdn.example.test/sku-1002.png",
+      "version": 1,
+      "updated_at_ms": 1765756800000,
+      "source_version": "v2"
+    },
+    {
+      "sku": "JP-2001",
+      "title": "木綿シャツ",
+      "price_cents": 4500,
+      "currency": "JPY",
+      "stock": 3,
+      "active": true,
+      "image_url": "https://cdn.example.test/jp-2001.png",
+      "version": 1,
+      "updated_at_ms": 1765756800000,
+      "source_version": "v1"
+    },
+    {
+      "sku": "EU-3001",
+      "title": "Linen Shirt",
+      "price_cents": 1299,
+      "currency": "EUR",
+      "stock": 8,
+      "active": true,
+      "image_url": "https://cdn.example.test/eu-3001.png",
+      "version": 1,
+      "updated_at_ms": 1765756800000,
+      "source_version": "v1"
+    }
+  ]
+}

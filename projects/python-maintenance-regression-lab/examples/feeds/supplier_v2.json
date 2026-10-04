@@ -1,0 +1,25 @@
+{
+  "version": "v2",
+  "currency": "USD",
+  "items": [
+    {
+      "sku": "SKU-1001",
+      "title": "Widget Alpha",
+      "price_cents": 2150,
+      "stock": 12,
+      "active": true,
+      "image_url": "https://cdn.example.test/sku-1001.png",
+      "updated_at": "2026-01-02T00:00:00Z"
+    },
+    {
+      "sku": "SKU-2001",
+      "title": "Nexus Hub",
+      "price": "40.00",
+      "currency": "USD",
+      "stock": 7,
+      "active": true,
+      "image_url": "https://cdn.example.test/sku-2001.png",
+      "updated_at": "2026-01-03T12:00:00Z"
+    }
+  ]
+}

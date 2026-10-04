@@ -21,6 +21,8 @@ The command writes normalized.json, normalized.csv, and summary.json.
 
 ## Portfolio Labs
 
+- **[Python Maintenance & Regression Lab](projects/python-maintenance-regression-lab/)** — Offline layered catalog-ingest service that decodes mixed encodings, adapts v1/v2 feeds, applies versioned SKU updates, and locks sixteen historical defects behind deterministic regression tests.
+
 - **[Reliable Automation Job Runner Lab](projects/automation-job-runner-lab/)** — Offline Python automation runner with declarative DAG jobs, windowed scheduling, idempotent execution, retry/backoff, structured logs, atomic checkpoints, leases, and dry-run overlays.
 
 - **[API Integration Reliability Lab](projects/api-integration-reliability-lab/)** — Offline REST/webhook integration lab that paginates a local mock API, retries with backoff, validates schemas, writes idempotently, checkpoints progress, and recovers from mid-sync failure.

@@ -1,0 +1,12 @@
+{
+  "title": "Python Maintenance & Regression Lab",
+  "summary": "Offline layered catalog-ingest service that decodes mixed encodings, adapts v1/v2 feeds, applies versioned SKU updates, and locks sixteen historical defects behind deterministic regression tests.",
+  "skills": [
+    "Python",
+    "debugging",
+    "regression testing",
+    "compatibility",
+    "logging"
+  ],
+  "verification": "python -m unittest discover -s projects/python-maintenance-regression-lab/tests -v"
+}
