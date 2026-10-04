@@ -1,0 +1,15 @@
+{
+  "title": "LLM Agent Evaluation & Guardrails Lab — Case 003",
+  "summary": "Offline RAG evaluation lab that scores a synthetic handbook corpus with planted-claim diagnostics, atomic citation checks, and fail-closed safety boundaries.",
+  "skills": [
+    "LLM",
+    "agents",
+    "evaluation",
+    "structured outputs",
+    "guardrails",
+    "testing"
+  ],
+  "verification": "python -m unittest discover -s projects/llm-agent-evaluation-lab-case-003/tests -v",
+  "research_backed": true,
+  "reference_count": 9
+}

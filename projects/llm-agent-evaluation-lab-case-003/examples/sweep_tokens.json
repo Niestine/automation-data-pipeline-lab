@@ -1,0 +1,38 @@
+{
+  "question": "alpha beta gamma delta extra",
+  "gold_claim_ids": ["G1", "G2", "G3", "G4"],
+  "sentences": [
+    {
+      "text": "alpha beta gamma delta extra claim g1",
+      "claims": [{"id": "G1", "substring": "claim g1"}]
+    },
+    {
+      "text": "alpha beta gamma delta claim g2 false one false two",
+      "claims": [
+        {"id": "G2", "substring": "claim g2"},
+        {"id": "F1", "substring": "false one"},
+        {"id": "F2", "substring": "false two"}
+      ]
+    },
+    {
+      "text": "alpha beta gamma claim g3 false three false four",
+      "claims": [
+        {"id": "G3", "substring": "claim g3"},
+        {"id": "F3", "substring": "false three"},
+        {"id": "F4", "substring": "false four"}
+      ]
+    },
+    {
+      "text": "alpha beta claim g4 false five false six",
+      "claims": [
+        {"id": "G4", "substring": "claim g4"},
+        {"id": "F5", "substring": "false five"},
+        {"id": "F6", "substring": "false six"}
+      ]
+    },
+    {
+      "text": "alpha filler filler filler",
+      "claims": []
+    }
+  ]
+}

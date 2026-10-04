@@ -1,0 +1,84 @@
+{
+  "ratios": {
+    "0.0": {
+      "schema_version": "cited_answer_v1",
+      "item_id": "q-lamp",
+      "surface_text": "The clear-dock lamp is green.",
+      "reverse_questions": ["What color is the clear-dock lamp?"],
+      "claims": [
+        {
+          "claim_id": "G-LAMP",
+          "text": "The loading lamp color for a clear dock is green.",
+          "kind": "fact",
+          "support": "supported",
+          "citations": [{"chunk_id": "ch-lamp-p1", "substring": "loading lamp color for a clear dock is green"}],
+          "fallback": null
+        }
+      ]
+    },
+    "0.2": {
+      "schema_version": "cited_answer_v1",
+      "item_id": "q-lamp",
+      "surface_text": "The clear-dock lamp is green.",
+      "reverse_questions": ["What color is the clear-dock lamp?"],
+      "claims": [
+        {
+          "claim_id": "G-LAMP",
+          "text": "The loading lamp color for a clear dock is green.",
+          "kind": "fact",
+          "support": "supported",
+          "citations": [{"chunk_id": "ch-lamp-p1", "substring": "loading lamp color for a clear dock is green"}],
+          "fallback": null
+        }
+      ]
+    },
+    "0.4": {
+      "schema_version": "cited_answer_v1",
+      "item_id": "q-lamp",
+      "surface_text": "The clear-dock lamp is green.",
+      "reverse_questions": ["What color is the clear-dock lamp?"],
+      "claims": [
+        {
+          "claim_id": "G-LAMP",
+          "text": "The loading lamp color for a clear dock is green.",
+          "kind": "fact",
+          "support": "supported",
+          "citations": [{"chunk_id": "ch-lamp-p1", "substring": "loading lamp color for a clear dock is green"}],
+          "fallback": null
+        }
+      ]
+    },
+    "0.6": {
+      "schema_version": "cited_answer_v1",
+      "item_id": "q-lamp",
+      "surface_text": "The clear-dock lamp is green.",
+      "reverse_questions": ["What color is the clear-dock lamp?"],
+      "claims": [
+        {
+          "claim_id": "G-LAMP",
+          "text": "The loading lamp color for a clear dock is green.",
+          "kind": "fact",
+          "support": "supported",
+          "citations": [{"chunk_id": "ch-lamp-p1", "substring": "loading lamp color for a clear dock is green"}],
+          "fallback": null
+        }
+      ]
+    },
+    "0.8": {
+      "schema_version": "cited_answer_v1",
+      "item_id": "q-lamp",
+      "surface_text": "The lamps are on the north wall.",
+      "reverse_questions": ["Where are the loading lamps mounted?"],
+      "claims": [
+        {
+          "claim_id": "F-LAMP-WALL",
+          "text": "Loading lamps are mounted on the north wall.",
+          "kind": "fact",
+          "support": "supported",
+          "citations": [{"chunk_id": "ch-lamp-n1", "substring": "mounted on the north wall"}],
+          "fallback": null
+        }
+      ]
+    }
+  }
+}
