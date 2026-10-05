@@ -1,0 +1,56 @@
+{
+  "origin": "https://catalog.example.invalid",
+  "seed_path": "/catalog/",
+  "robots": {
+    "status": 200,
+    "headers": {
+      "Content-Type": "text/plain",
+      "Cache-Control": "max-age=86400"
+    },
+    "body": "User-agent: FrontierBot\nDisallow: /\nAllow: /catalog/\nDisallow: /private/\n\nUser-agent: *\nDisallow: /\n"
+  },
+  "pages": [
+    {
+      "path": "/catalog/",
+      "role": "index",
+      "etag": "\"index-1\"",
+      "content_type": "text/html; charset=utf-8"
+    },
+    {
+      "path": "/catalog/wool-coat",
+      "role": "base",
+      "etag": "\"wool-1\"",
+      "content_type": "text/html; charset=utf-8"
+    },
+    {
+      "path": "/catalog/linen-shirt",
+      "role": "linen",
+      "etag": "\"linen-1\"",
+      "content_type": "text/html; charset=iso-8859-1"
+    },
+    {
+      "path": "/catalog/field-notes",
+      "role": "base",
+      "etag": "\"notes-1\"",
+      "content_type": "text/html; charset=utf-8"
+    }
+  ],
+  "revisions": [
+    {
+      "horizon": 1,
+      "path": "/catalog/wool-coat",
+      "role": "timestamp",
+      "etag": "\"wool-2\"",
+      "encoding": "gzip",
+      "content_type": "text/html; charset=utf-8"
+    },
+    {
+      "horizon": 1,
+      "path": "/catalog/field-notes",
+      "role": "paragraph",
+      "etag": "\"notes-2\"",
+      "encoding": "identity",
+      "content_type": "text/html; charset=utf-8"
+    }
+  ]
+}

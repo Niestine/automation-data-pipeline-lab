@@ -21,6 +21,8 @@ The command writes normalized.json, normalized.csv, and summary.json.
 
 ## Portfolio Labs
 
+- **[Resilient Web Data Collection Lab — Case 002](projects/resilient-web-collection-lab-case-002/)** — Offline incremental crawler that revalidates an allowlisted fixture with ETag conditional GET, freshness and age scheduling, and a durable SQLite frontier.
+
 - **[Python Maintenance & Regression Lab — Case 008](projects/python-maintenance-regression-lab-case-008/)** — In-process crash and isolation lab that keeps committed page images, publish bytes, and a stock total intact across prefix cuts, savepoint rollback, and a write-locked decrement.
 
 - **[Python Maintenance & Regression Lab — Case 007](projects/python-maintenance-regression-lab-case-007/)** — Offline bay-hold desk that locks retry, backoff, and amplification repairs with fault injection and a virtual clock.
