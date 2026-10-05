@@ -1,0 +1,68 @@
+{
+  "parent": "garden-north",
+  "resources": [
+    {
+      "beds": 2,
+      "holder_label": "holder-001",
+      "note": "open",
+      "plot_code": "N-01",
+      "resource_id": "lot-001",
+      "sort_key": 1,
+      "source_version": 1
+    },
+    {
+      "beds": 1,
+      "holder_label": "holder-002",
+      "note": "open",
+      "plot_code": "N-02",
+      "resource_id": "lot-002",
+      "sort_key": 2,
+      "source_version": 1
+    },
+    {
+      "beds": 3,
+      "holder_label": "holder-003",
+      "note": "closed",
+      "plot_code": "N-03",
+      "resource_id": "lot-003",
+      "sort_key": 3,
+      "source_version": 1
+    },
+    {
+      "beds": 2,
+      "holder_label": "holder-004",
+      "note": "open",
+      "plot_code": "N-04",
+      "resource_id": "lot-004",
+      "sort_key": 4,
+      "source_version": 1
+    },
+    {
+      "beds": 1,
+      "holder_label": "holder-005",
+      "note": "open",
+      "plot_code": "N-05",
+      "resource_id": "lot-005",
+      "sort_key": 5,
+      "source_version": 1
+    },
+    {
+      "beds": 4,
+      "holder_label": "holder-006",
+      "note": "open",
+      "plot_code": "N-06",
+      "resource_id": "lot-006",
+      "sort_key": 6,
+      "source_version": 1
+    },
+    {
+      "beds": 2,
+      "holder_label": "holder-007",
+      "note": "open",
+      "plot_code": "N-07",
+      "resource_id": "lot-007",
+      "sort_key": 7,
+      "source_version": 1
+    }
+  ]
+}

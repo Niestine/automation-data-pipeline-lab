@@ -1,0 +1,13 @@
+{
+  "data": {
+    "beds": 2,
+    "holder_label": "holder-009",
+    "note": "revised",
+    "parent": "garden-north",
+    "plot_code": "N-09",
+    "resource_id": "lot-009",
+    "sort_key": 9,
+    "source_version": 2
+  },
+  "type": "allotment.revised"
+}
