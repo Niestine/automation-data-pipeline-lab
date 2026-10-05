@@ -1,0 +1,6 @@
+{
+  "quay": {
+    "profile": "standard",
+    "key_text": "quay-lab-route-secret-032bytes!!"
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "title": "API Integration Reliability Lab — Case 002",
+  "summary": "Offline quay-release inbox that verifies Standard Webhooks and Stripe-style signatures, claims each event once, and reconciles missed deliveries with a cursor.",
+  "skills": [
+    "Python",
+    "REST API",
+    "webhooks",
+    "retries",
+    "pagination",
+    "idempotency",
+    "testing"
+  ],
+  "verification": "python -m unittest discover -s projects/api-integration-reliability-lab-case-002/tests -v",
+  "research_backed": true,
+  "reference_count": 10
+}

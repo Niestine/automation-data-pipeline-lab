@@ -1,0 +1,27 @@
+{
+  "push": [
+    {
+      "event_id": "msg_quay_0001",
+      "type": "release.granted",
+      "api_version": "2024-09-01",
+      "created": 1700000000,
+      "data": {"berth": "Q3", "id": "rel_1001", "status": "granted"}
+    },
+    {
+      "event_id": "msg_quay_0002",
+      "type": "release.held",
+      "api_version": "2024-09-01",
+      "created": 1700000300,
+      "data": {"berth": "Q4", "id": "rel_1002", "status": "held"}
+    }
+  ],
+  "missed": [
+    {
+      "event_id": "msg_quay_0003",
+      "type": "release.settled",
+      "api_version": "2024-09-01",
+      "created": 1700000600,
+      "data": {"berth": "Q3", "id": "rel_1001", "status": "settled"}
+    }
+  ]
+}
