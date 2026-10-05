@@ -1,0 +1,14 @@
+{
+  "base_load": 8,
+  "draws": [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0],
+  "jobs": [
+    {"operation_id": "BAY-2000", "fault": true, "first_ok": false, "transient": false},
+    {"operation_id": "BAY-2001", "fault": true, "first_ok": true, "transient": false},
+    {"operation_id": "BAY-2002", "fault": true, "first_ok": true, "transient": false},
+    {"operation_id": "BAY-2003", "fault": true, "first_ok": true, "transient": false},
+    {"operation_id": "BAY-2004", "fault": false, "first_ok": false, "transient": true},
+    {"operation_id": "BAY-2005", "fault": false, "first_ok": true, "transient": false},
+    {"operation_id": "BAY-2006", "fault": false, "first_ok": false, "transient": true},
+    {"operation_id": "BAY-2007", "fault": false, "first_ok": true, "transient": false}
+  ]
+}
