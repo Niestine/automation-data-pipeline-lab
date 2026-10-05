@@ -1,0 +1,3 @@
+# Byte fixtures are oracles. Git must not translate their line endings.
+tests/golden/** -text
+examples/*.bin -text
