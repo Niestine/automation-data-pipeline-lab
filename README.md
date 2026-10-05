@@ -21,6 +21,8 @@ The command writes normalized.json, normalized.csv, and summary.json.
 
 ## Portfolio Labs
 
+- **[LLM Agent Evaluation & Guardrails Lab — Case 006](projects/llm-agent-evaluation-lab-case-006/)** — Offline tide-desk router that cascade-routes a closed berth slip across scripted providers, classifies vendor failures, and keeps a dollar budget separate from a retry-token bucket.
+
 - **[API Integration Reliability Lab — Case 003](projects/api-integration-reliability-lab-case-003/)** — Offline plot-allotment export that walks an opaque snapshot cursor, replays a killed page without duplicating rows, and upserts with a three-state idempotency record.
 
 - **[経済指標リサーチ・統計比較ラボ](projects/economic-indicator-research-lab/)** — 自主制作。実質GDP成長率・インフレ率・CPIの整理、共通基準年への換算、観測値のみの記述統計、欠損検査、CSVと日本語レポート、出典管理。公開デモは架空の数値。

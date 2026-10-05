@@ -1,0 +1,20 @@
+{
+  "description": "Synthetic harbor notices. Vessel names and berth windows are fictional.",
+  "notices": [
+    {
+      "query_id": "N-14",
+      "text": "MV NORTHMARK requests berth B-4 for 06:00-08:00",
+      "slip": {"berth": "B-4", "vessel": "MV NORTHMARK", "window": "06:00-08:00"}
+    },
+    {
+      "query_id": "N-15",
+      "text": "MV SOUTHLINE requests berth C-2 for 09:00-11:00",
+      "slip": {"berth": "C-2", "vessel": "MV SOUTHLINE", "window": "09:00-11:00"}
+    },
+    {
+      "query_id": "N-16",
+      "text": "MV WESTREACH requests berth A-1 for 14:00-16:00",
+      "slip": {"berth": "A-1", "vessel": "MV WESTREACH", "window": "14:00-16:00"}
+    }
+  ]
+}

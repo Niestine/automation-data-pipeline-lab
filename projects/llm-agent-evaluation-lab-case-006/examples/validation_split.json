@@ -1,0 +1,8 @@
+{
+  "costs": {"skiff": 0.25, "yawl": 0.5, "barque": 1.0},
+  "answers": {
+    "skiff": ["BERTH-B4", "BERTH-B4"],
+    "yawl": ["BERTH-B4", "BERTH-B4"],
+    "barque": ["BERTH-B4", "BERTH-C2"]
+  }
+}
