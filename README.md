@@ -21,6 +21,8 @@ The command writes normalized.json, normalized.csv, and summary.json.
 
 ## Portfolio Labs
 
+- **[API Integration Reliability Lab — Case 002](projects/api-integration-reliability-lab-case-002/)** — Offline quay-release inbox that verifies Standard Webhooks and Stripe-style signatures, claims each event once, and reconciles missed deliveries with a cursor.
+
 - **[LLM Agent Evaluation & Guardrails Lab — Case 004](projects/llm-agent-evaluation-lab-case-004/)** — Offline office-desk agent lab that fixes a plan before untrusted tool data is read, gates sends with capability checks and resumable approval, and scores replayable traces.
 
 - **[Resilient Web Data Collection Lab — Case 002](projects/resilient-web-collection-lab-case-002/)** — Offline incremental crawler that revalidates an allowlisted fixture with ETag conditional GET, freshness and age scheduling, and a durable SQLite frontier.
