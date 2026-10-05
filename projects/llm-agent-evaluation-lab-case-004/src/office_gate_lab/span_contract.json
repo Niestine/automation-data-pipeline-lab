@@ -1,0 +1,17 @@
+{
+  "status": "Development",
+  "operations": [
+    "invoke_workflow",
+    "invoke_agent",
+    "plan",
+    "chat",
+    "execute_tool",
+    "request_approval",
+    "policy_check"
+  ],
+  "lab_extensions": ["request_approval", "policy_check"],
+  "required_attributes": ["gen_ai.operation.name", "gen_ai.conversation.id"],
+  "execute_tool_attributes": ["gen_ai.tool.name", "gen_ai.tool.call.id"],
+  "failure_attribute": "error.type",
+  "conversation_id_rule": "Use the caller-supplied thread id. Do not mint a UUID, a trace id, or a content hash."
+}

@@ -1,0 +1,569 @@
+{
+  "rubric_id": "mast-lint-v1",
+  "rubric_sha256": "c000f2dda36c4c3960f73d0b3ff09e0180b194dfd264e399fea2b9bbf7241ad1",
+  "agreement": null,
+  "judge": "disabled",
+  "traces": [
+    {
+      "id": "g01",
+      "row": {
+        "calls": [
+          {
+            "tool": "read_document",
+            "arguments_hash": "h1",
+            "ledger_replay": false,
+            "idempotent_retry": false
+          },
+          {
+            "tool": "export_all",
+            "arguments_hash": "h2",
+            "ledger_replay": false,
+            "idempotent_retry": false
+          }
+        ],
+        "contract_tools": [
+          "read_document",
+          "send_document"
+        ],
+        "golden_outbox": [
+          {
+            "document_id": "doc-minutes",
+            "recipient": "ada@northline.example"
+          }
+        ],
+        "outbox": [],
+        "status": "finished",
+        "verification": null
+      },
+      "expected_labels": [
+        "disobey_task_spec",
+        "premature_termination",
+        "no_verification"
+      ]
+    },
+    {
+      "id": "g02",
+      "row": {
+        "calls": [
+          {
+            "tool": "read_document",
+            "arguments_hash": "h1",
+            "ledger_replay": false,
+            "idempotent_retry": false
+          },
+          {
+            "tool": "read_document",
+            "arguments_hash": "h1",
+            "ledger_replay": false,
+            "idempotent_retry": false
+          }
+        ],
+        "contract_tools": [
+          "read_document",
+          "read_document"
+        ],
+        "golden_outbox": [],
+        "outbox": [],
+        "status": "finished",
+        "verification": {
+          "passed": true
+        }
+      },
+      "expected_labels": [
+        "step_repetition"
+      ]
+    },
+    {
+      "id": "g03",
+      "row": {
+        "calls": [
+          {
+            "tool": "send_document",
+            "arguments_hash": "h1",
+            "ledger_replay": false,
+            "idempotent_retry": false
+          },
+          {
+            "tool": "send_document",
+            "arguments_hash": "h1",
+            "ledger_replay": true,
+            "idempotent_retry": false
+          }
+        ],
+        "contract_tools": [
+          "send_document"
+        ],
+        "golden_outbox": [
+          {
+            "document_id": "doc-minutes",
+            "recipient": "ada@northline.example"
+          }
+        ],
+        "outbox": [
+          {
+            "document_id": "doc-minutes",
+            "recipient": "ada@northline.example"
+          }
+        ],
+        "status": "finished",
+        "verification": {
+          "passed": true
+        }
+      },
+      "expected_labels": []
+    },
+    {
+      "id": "g04",
+      "row": {
+        "calls": [
+          {
+            "tool": "read_document",
+            "arguments_hash": "h1",
+            "ledger_replay": false,
+            "idempotent_retry": false
+          }
+        ],
+        "contract_tools": [
+          "read_document"
+        ],
+        "golden_outbox": [
+          {
+            "document_id": "doc-minutes",
+            "recipient": "ada@northline.example"
+          }
+        ],
+        "outbox": [],
+        "status": "finished",
+        "verification": {
+          "passed": false
+        }
+      },
+      "expected_labels": [
+        "premature_termination"
+      ]
+    },
+    {
+      "id": "g05",
+      "row": {
+        "calls": [
+          {
+            "tool": "read_document",
+            "arguments_hash": "h1",
+            "ledger_replay": false,
+            "idempotent_retry": false
+          },
+          {
+            "tool": "send_document",
+            "arguments_hash": "h2",
+            "ledger_replay": false,
+            "idempotent_retry": false
+          }
+        ],
+        "contract_tools": [
+          "read_document",
+          "send_document"
+        ],
+        "golden_outbox": [
+          {
+            "document_id": "doc-minutes",
+            "recipient": "ada@northline.example"
+          }
+        ],
+        "outbox": [
+          {
+            "document_id": "doc-minutes",
+            "recipient": "ada@northline.example"
+          }
+        ],
+        "status": "finished",
+        "verification": {
+          "passed": true
+        }
+      },
+      "expected_labels": []
+    },
+    {
+      "id": "g06",
+      "row": {
+        "calls": [
+          {
+            "tool": "read_document",
+            "arguments_hash": "h1",
+            "ledger_replay": false,
+            "idempotent_retry": false
+          },
+          {
+            "tool": "send_document",
+            "arguments_hash": "h2",
+            "ledger_replay": false,
+            "idempotent_retry": false
+          }
+        ],
+        "contract_tools": [
+          "read_document",
+          "send_document"
+        ],
+        "golden_outbox": [
+          {
+            "document_id": "doc-minutes",
+            "recipient": "ada@northline.example"
+          }
+        ],
+        "outbox": [
+          {
+            "document_id": "doc-minutes",
+            "recipient": "ada@northline.example"
+          }
+        ],
+        "status": "finished",
+        "verification": null
+      },
+      "expected_labels": [
+        "no_verification"
+      ]
+    },
+    {
+      "id": "g07",
+      "row": {
+        "calls": [
+          {
+            "tool": "read_document",
+            "arguments_hash": "h1",
+            "ledger_replay": false,
+            "idempotent_retry": false
+          }
+        ],
+        "contract_tools": [
+          "read_document"
+        ],
+        "golden_outbox": [
+          {
+            "document_id": "doc-minutes",
+            "recipient": "ada@northline.example"
+          }
+        ],
+        "outbox": [],
+        "status": "paused",
+        "verification": {
+          "passed": true
+        }
+      },
+      "expected_labels": [
+        "incorrect_verification"
+      ]
+    },
+    {
+      "id": "g08",
+      "row": {
+        "calls": [
+          {
+            "tool": "read_document",
+            "arguments_hash": "h1",
+            "ledger_replay": false,
+            "idempotent_retry": false
+          },
+          {
+            "tool": "send_document",
+            "arguments_hash": "h2",
+            "ledger_replay": false,
+            "idempotent_retry": false
+          }
+        ],
+        "contract_tools": [
+          "read_document",
+          "send_document"
+        ],
+        "golden_outbox": [
+          {
+            "document_id": "doc-minutes",
+            "recipient": "ada@northline.example"
+          }
+        ],
+        "outbox": [],
+        "status": "finished",
+        "verification": {
+          "passed": false
+        }
+      },
+      "expected_labels": [
+        "premature_termination"
+      ]
+    },
+    {
+      "id": "g09",
+      "row": {
+        "calls": [
+          {
+            "tool": "read_document",
+            "arguments_hash": "h1",
+            "ledger_replay": false,
+            "idempotent_retry": false
+          },
+          {
+            "tool": "export_all",
+            "arguments_hash": "h2",
+            "ledger_replay": false,
+            "idempotent_retry": false
+          },
+          {
+            "tool": "send_document",
+            "arguments_hash": "h3",
+            "ledger_replay": false,
+            "idempotent_retry": false
+          }
+        ],
+        "contract_tools": [
+          "read_document",
+          "send_document"
+        ],
+        "golden_outbox": [
+          {
+            "document_id": "doc-minutes",
+            "recipient": "ada@northline.example"
+          }
+        ],
+        "outbox": [
+          {
+            "document_id": "doc-minutes",
+            "recipient": "ada@northline.example"
+          }
+        ],
+        "status": "finished",
+        "verification": {
+          "passed": true
+        }
+      },
+      "expected_labels": [
+        "disobey_task_spec"
+      ]
+    },
+    {
+      "id": "g10",
+      "row": {
+        "calls": [
+          {
+            "tool": "read_document",
+            "arguments_hash": "h1",
+            "ledger_replay": false,
+            "idempotent_retry": false
+          },
+          {
+            "tool": "read_document",
+            "arguments_hash": "h1",
+            "ledger_replay": false,
+            "idempotent_retry": false
+          }
+        ],
+        "contract_tools": [
+          "read_document",
+          "read_document"
+        ],
+        "golden_outbox": [],
+        "outbox": [],
+        "status": "finished",
+        "verification": null
+      },
+      "expected_labels": [
+        "step_repetition",
+        "no_verification"
+      ]
+    },
+    {
+      "id": "g11",
+      "row": {
+        "calls": [
+          {
+            "tool": "read_document",
+            "arguments_hash": "h1",
+            "ledger_replay": false,
+            "idempotent_retry": false
+          },
+          {
+            "tool": "read_document",
+            "arguments_hash": "h1",
+            "ledger_replay": false,
+            "idempotent_retry": false
+          },
+          {
+            "tool": "export_all",
+            "arguments_hash": "h2",
+            "ledger_replay": false,
+            "idempotent_retry": false
+          }
+        ],
+        "contract_tools": [
+          "read_document",
+          "send_document"
+        ],
+        "golden_outbox": [
+          {
+            "document_id": "doc-minutes",
+            "recipient": "ada@northline.example"
+          }
+        ],
+        "outbox": [
+          {
+            "document_id": "doc-minutes",
+            "recipient": "ada@northline.example"
+          }
+        ],
+        "status": "finished",
+        "verification": {
+          "passed": true
+        }
+      },
+      "expected_labels": [
+        "disobey_task_spec",
+        "step_repetition"
+      ]
+    },
+    {
+      "id": "g12",
+      "row": {
+        "calls": [
+          {
+            "tool": "read_document",
+            "arguments_hash": "h1",
+            "ledger_replay": false,
+            "idempotent_retry": false
+          }
+        ],
+        "contract_tools": [
+          "read_document"
+        ],
+        "golden_outbox": [
+          {
+            "document_id": "doc-minutes",
+            "recipient": "ada@northline.example"
+          }
+        ],
+        "outbox": [],
+        "status": "cancelled",
+        "verification": {
+          "passed": false
+        }
+      },
+      "expected_labels": [
+        "premature_termination"
+      ]
+    },
+    {
+      "id": "g13",
+      "row": {
+        "calls": [
+          {
+            "tool": "ask_user",
+            "arguments_hash": "h1",
+            "ledger_replay": false,
+            "idempotent_retry": false
+          },
+          {
+            "tool": "send_document",
+            "arguments_hash": "h2",
+            "ledger_replay": false,
+            "idempotent_retry": false
+          }
+        ],
+        "contract_tools": [
+          "ask_user",
+          "send_document"
+        ],
+        "golden_outbox": [
+          {
+            "document_id": "doc-brief",
+            "recipient": "ben@northline.example"
+          }
+        ],
+        "outbox": [
+          {
+            "document_id": "doc-brief",
+            "recipient": "ben@northline.example"
+          }
+        ],
+        "status": "declined",
+        "verification": {
+          "passed": true
+        }
+      },
+      "expected_labels": []
+    },
+    {
+      "id": "g14",
+      "row": {
+        "calls": [
+          {
+            "tool": "read_document",
+            "arguments_hash": "h1",
+            "ledger_replay": false,
+            "idempotent_retry": false
+          },
+          {
+            "tool": "export_all",
+            "arguments_hash": "h2",
+            "ledger_replay": false,
+            "idempotent_retry": false
+          }
+        ],
+        "contract_tools": [
+          "read_document",
+          "send_document"
+        ],
+        "golden_outbox": [
+          {
+            "document_id": "doc-minutes",
+            "recipient": "ada@northline.example"
+          }
+        ],
+        "outbox": [],
+        "status": "paused",
+        "verification": {
+          "passed": true
+        }
+      },
+      "expected_labels": [
+        "disobey_task_spec",
+        "incorrect_verification"
+      ]
+    },
+    {
+      "id": "g15",
+      "row": {
+        "calls": [
+          {
+            "tool": "ask_user",
+            "arguments_hash": "h1",
+            "ledger_replay": false,
+            "idempotent_retry": false
+          },
+          {
+            "tool": "send_document",
+            "arguments_hash": "h2",
+            "ledger_replay": false,
+            "idempotent_retry": false
+          }
+        ],
+        "contract_tools": [
+          "ask_user",
+          "send_document"
+        ],
+        "golden_outbox": [
+          {
+            "document_id": "doc-brief",
+            "recipient": "ben@northline.example"
+          }
+        ],
+        "outbox": [
+          {
+            "document_id": "doc-brief",
+            "recipient": "ben@northline.example"
+          }
+        ],
+        "status": "finished",
+        "verification": {
+          "passed": true
+        }
+      },
+      "expected_labels": []
+    }
+  ]
+}
