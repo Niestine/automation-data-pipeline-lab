@@ -1,0 +1,15 @@
+{
+  "title": "LLM Agent Evaluation & Guardrails Lab — Case 006",
+  "summary": "Offline tide-desk router that cascade-routes a closed berth slip across scripted providers, classifies vendor failures, and keeps a dollar budget separate from a retry-token bucket.",
+  "skills": [
+    "LLM",
+    "agents",
+    "evaluation",
+    "structured outputs",
+    "guardrails",
+    "testing"
+  ],
+  "verification": "python -m unittest discover -s projects/llm-agent-evaluation-lab-case-006/tests -v",
+  "research_backed": true,
+  "reference_count": 10
+}

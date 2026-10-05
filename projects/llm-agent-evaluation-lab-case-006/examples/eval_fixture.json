@@ -1,0 +1,66 @@
+{
+  "caller_id": "desk-alpha",
+  "budget": 20.0,
+  "request_quota": 50,
+  "token_quota": 100000,
+  "anomaly_rate": 40,
+  "threshold": 0.5,
+  "gamma": 0.0,
+  "quality_lambda": 0.5,
+  "lambdas": [0.5, 5.0],
+  "epsilons": [0.0, 0.1, 0.2, 0.4],
+  "c_min": 0.25,
+  "c_max": 1.0,
+  "max_depth": 3,
+  "max_attempts": 3,
+  "max_total_attempts": 12,
+  "models": [
+    {
+      "model_id": "skiff",
+      "provider": "openai",
+      "credential_id": "cred-skiff",
+      "per_request": 0.25,
+      "input_per_token": 0.0,
+      "output_per_token": 0.0,
+      "expected_output_tokens": 0
+    },
+    {
+      "model_id": "yawl",
+      "provider": "anthropic",
+      "credential_id": "cred-yawl",
+      "per_request": 0.5,
+      "input_per_token": 0.0,
+      "output_per_token": 0.0,
+      "expected_output_tokens": 0
+    },
+    {
+      "model_id": "barque",
+      "provider": "openai",
+      "credential_id": "cred-barque",
+      "per_request": 1.0,
+      "input_per_token": 0.0,
+      "output_per_token": 0.0,
+      "expected_output_tokens": 0
+    }
+  ],
+  "queries": [
+    {
+      "query_id": "Q1",
+      "text": "Notice Q1 assign MV NORTHMARK a dawn window",
+      "input_tokens": 8,
+      "gold": {"skiff": 1, "yawl": 1, "barque": 1}
+    },
+    {
+      "query_id": "Q2",
+      "text": "Notice Q2 assign MV SOUTHLINE a morning window",
+      "input_tokens": 8,
+      "gold": {"skiff": 0, "yawl": 1, "barque": 1}
+    },
+    {
+      "query_id": "Q3",
+      "text": "Notice Q3 assign MV WESTREACH an afternoon window",
+      "input_tokens": 8,
+      "gold": {"skiff": 0, "yawl": 0, "barque": 1}
+    }
+  ]
+}
