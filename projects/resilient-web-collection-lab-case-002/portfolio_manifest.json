@@ -1,0 +1,15 @@
+{
+  "title": "Resilient Web Data Collection Lab — Case 002",
+  "summary": "Offline incremental crawler that revalidates an allowlisted fixture with ETag conditional GET, freshness and age scheduling, and a durable SQLite frontier.",
+  "skills": [
+    "Python",
+    "web data collection",
+    "rate limiting",
+    "retries",
+    "normalization",
+    "testing"
+  ],
+  "verification": "python -m unittest discover -s projects/resilient-web-collection-lab-case-002/tests -v",
+  "research_backed": true,
+  "reference_count": 9
+}

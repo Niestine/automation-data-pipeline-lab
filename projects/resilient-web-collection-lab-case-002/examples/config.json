@@ -1,0 +1,22 @@
+{
+  "user_agent": "Mozilla/5.0 (compatible; FrontierBot/0.2; +https://collection.example.invalid/frontier)",
+  "product_token": "FrontierBot",
+  "accept": "text/html, application/xhtml+xml;q=0.9",
+  "accept_language": "en",
+  "min_host_interval_seconds": 10,
+  "page_budget": 8,
+  "retry_budget": 8,
+  "objective": "freshness",
+  "backoff_base_seconds": 1,
+  "backoff_cap_seconds": 300,
+  "retry_after_defer_seconds": 3600,
+  "collection_capacity": 50,
+  "simhash_k": 23,
+  "material_detection": true,
+  "horizon_seconds": 604800,
+  "robots_default_ttl_seconds": 86400,
+  "allowlist": ["catalog.example.invalid"],
+  "origin": "https://catalog.example.invalid",
+  "max_robots_redirects": 5,
+  "seed": 20261005
+}
