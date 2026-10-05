@@ -1,0 +1,21 @@
+{
+  "compensation_count": 2,
+  "first_failure_class": "mixed_fields",
+  "first_failure_limit": 1,
+  "first_failure_rank": 1,
+  "first_failure_score": 100,
+  "illegal_orphan_count": 1,
+  "model_p_flushed_balance": 25,
+  "model_p_garbage_structural": true,
+  "model_p_image_count": 3,
+  "model_p_unflushed_balance": 10,
+  "model_z_4096_count": 6,
+  "model_z_512_count": 6,
+  "model_z_all_durable_match": true,
+  "model_z_cut_count": 12,
+  "permutation_count": 24,
+  "publish_before_flush_cut_count": 6,
+  "rename_all_durable_match": true,
+  "rename_permutation_count": 3,
+  "staged_orphan_count": 0
+}
