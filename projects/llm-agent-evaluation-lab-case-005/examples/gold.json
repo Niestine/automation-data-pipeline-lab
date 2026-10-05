@@ -1,0 +1,100 @@
+{
+  "sentinel": "GOLD-ONLY-SENTINEL-7f3a",
+  "gold_patch_marker": "GOLD-PATCH-9c2e",
+  "cases": {
+    "ep-reason-strict": {"object": {"rationale": "18+24", "answer": "42"}, "answer_pointer": "/answer", "answer": "42"},
+    "ep-reason-fri": {"object": {"rationale": "18+24", "answer": "42"}, "answer_pointer": "/answer", "answer": "42"},
+    "ep-reason-nl": {"object": {"rationale": "sum", "answer": "42"}, "answer_pointer": "/answer", "answer": "42"},
+    "ep-class-strict": {"object": {"rationale": "Osaka is in Japan", "answer": "domestic"}, "answer_pointer": "/answer", "answer": "domestic"},
+    "ep-class-fri": {"object": {"rationale": "Osaka is in Japan", "answer": "domestic"}, "answer_pointer": "/answer", "answer": "domestic"},
+    "ep-class-nl": {"object": {"rationale": "domestic dock", "answer": "domestic"}, "answer_pointer": "/answer", "answer": "domestic"},
+    "ep-format-excluded": {"object": {"email": "vendor@example.test", "answer": "yes"}, "answer_pointer": "/answer", "answer": "yes"},
+    "ep-ablate-code-raw": {
+      "object": {"code": "RQ-14", "lane": "domestic"},
+      "answer_pointer": "/code",
+      "answer": "RQ-14",
+      "patch": [
+        {"op": "test", "path": "/code", "value": "RQ-99"},
+        {"op": "replace", "path": "/code", "value": "RQ-14"}
+      ]
+    },
+    "ep-ablate-code-loc": {"object": {"code": "RQ-14", "lane": "domestic"}, "answer_pointer": "/code", "answer": "RQ-14"},
+    "ep-ablate-code-prose": {
+      "object": {"code": "RQ-14", "lane": "domestic"},
+      "answer_pointer": "/code",
+      "answer": "RQ-14",
+      "patch": [
+        {"op": "test", "path": "/code", "value": "RQ-99"},
+        {"op": "replace", "path": "/code", "value": "RQ-14"}
+      ]
+    },
+    "ep-ablate-code-keyed": {
+      "object": {"code": "RQ-14", "lane": "domestic"},
+      "answer_pointer": "/code",
+      "answer": "RQ-14",
+      "patch": [
+        {"op": "test", "path": "/code", "value": "RQ-99"},
+        {"op": "replace", "path": "/code", "value": "RQ-14"}
+      ]
+    },
+    "ep-ablate-lane-raw": {"object": {"code": "RQ-14", "lane": "domestic"}, "answer_pointer": "/lane", "answer": "domestic"},
+    "ep-ablate-lane-loc": {"object": {"code": "RQ-14", "lane": "domestic"}, "answer_pointer": "/lane", "answer": "domestic"},
+    "ep-ablate-lane-prose": {
+      "object": {"code": "RQ-14", "lane": "domestic"},
+      "answer_pointer": "/lane",
+      "answer": "domestic",
+      "patch": [
+        {"op": "test", "path": "/lane", "value": "orbital"},
+        {"op": "replace", "path": "/lane", "value": "domestic"}
+      ]
+    },
+    "ep-ablate-lane-keyed": {
+      "object": {"code": "RQ-14", "lane": "domestic"},
+      "answer_pointer": "/lane",
+      "answer": "domestic",
+      "patch": [
+        {"op": "test", "path": "/lane", "value": "orbital"},
+        {"op": "replace", "path": "/lane", "value": "domestic"}
+      ]
+    },
+    "ep-harden": {
+      "object": {"roles": ["country music artist"]},
+      "answer_pointer": "/roles/0",
+      "answer": "country music artist"
+    },
+    "ep-synonym": {
+      "object": {"roles": ["country music artist", "composer"]},
+      "answer_pointer": "/roles/0",
+      "answer": "country music artist"
+    },
+    "ep-extra": {
+      "object": {"roles": ["composer"]},
+      "answer_pointer": "/roles/0",
+      "answer": "composer"
+    },
+    "ep-patch": {
+      "object": {
+        "tool": "place_hold",
+        "case_id": "HOLD-14",
+        "user_id": "clerk.mina",
+        "arguments": {"requisition_id": "RQ-14", "amount": 1800, "currency": "JPY", "note": "dock window"}
+      },
+      "answer_pointer": "/arguments/currency",
+      "answer": "JPY",
+      "patch": [
+        {"op": "test", "path": "/arguments/currency", "value": "USD"},
+        {"op": "replace", "path": "/arguments/currency", "value": "JPY"}
+      ]
+    },
+    "ep-regen": {
+      "object": {
+        "tool": "place_hold",
+        "case_id": "HOLD-14",
+        "user_id": "clerk.mina",
+        "arguments": {"requisition_id": "RQ-14", "amount": 1800, "currency": "JPY", "note": "dock window"}
+      },
+      "answer_pointer": "/arguments/currency",
+      "answer": "JPY"
+    }
+  }
+}

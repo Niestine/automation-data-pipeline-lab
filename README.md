@@ -21,6 +21,8 @@ The command writes normalized.json, normalized.csv, and summary.json.
 
 ## Portfolio Labs
 
+- **[LLM Agent Evaluation & Guardrails Lab — Case 005](projects/llm-agent-evaluation-lab-case-005/)** — Offline Kilnline lab that admits schemas, validates structured tool calls, repairs them with masked JSON Patch or abstain, and scores leaf accuracy apart from injection utility.
+
 - **[Python Maintenance & Regression Lab — Case 009](projects/python-maintenance-regression-lab-case-009/)** — A note-file CLI that keeps a frozen 0/1/2 exit contract, continues after bad operands, and locks the stderr problem record with backwards-compatibility tests.
 
 - **[Reliable Automation Job Runner Lab — Case 002](projects/automation-job-runner-lab-case-002/)** — Multi-process SQLite queue that leases one shift-slip export at a time, heartbeats a database-clock deadline, and fences every completion so a crashed or paused worker cannot apply the CSV twice.

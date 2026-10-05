@@ -1,0 +1,522 @@
+{
+  "seed": 5,
+  "cases": [
+    {
+      "id": "ep-reason-strict",
+      "family": "reasoning",
+      "report": "mode",
+      "quality": true,
+      "channel": "text.format",
+      "mode": "strict",
+      "schema_id": "answer",
+      "task": "Add the dock fees 18 and 24.",
+      "context": "Dock fees are 18 and 24.",
+      "execute": false,
+      "scripts": {
+        "strict": [
+          {"status": "object", "tokens": 20, "body": {"rationale": "18+24", "answer": "42"}}
+        ]
+      }
+    },
+    {
+      "id": "ep-reason-fri",
+      "family": "reasoning",
+      "report": "mode",
+      "quality": false,
+      "channel": "text.format",
+      "mode": "fri",
+      "schema_id": "answer",
+      "task": "Add the dock fees 18 and 24.",
+      "context": "Dock fees are 18 and 24.",
+      "execute": false,
+      "scripts": {
+        "fri": [
+          {"status": "object", "tokens": 20, "body": {"rationale": "18+24", "answer": "42", "confidence": 0.2}}
+        ]
+      }
+    },
+    {
+      "id": "ep-reason-nl",
+      "family": "reasoning",
+      "report": "mode",
+      "quality": false,
+      "channel": "text.format",
+      "mode": "nl_to_format",
+      "schema_id": "answer",
+      "task": "Add the dock fees 18 and 24.",
+      "context": "Dock fees are 18 and 24.",
+      "execute": false,
+      "scripts": {
+        "nl_to_format": [
+          {"status": "trace", "tokens": 12, "body": "18 plus 24 is 42."},
+          {"status": "object", "tokens": 18, "body": {"rationale": "sum", "answer": "42"}}
+        ]
+      }
+    },
+    {
+      "id": "ep-class-strict",
+      "family": "classification",
+      "report": "mode",
+      "quality": true,
+      "channel": "text.format",
+      "mode": "strict",
+      "schema_id": "classify",
+      "task": "Classify the supplier dock.",
+      "context": "The supplier dock is Osaka.",
+      "execute": false,
+      "scripts": {
+        "strict": [
+          {"status": "object", "tokens": 16, "body": {"rationale": "Osaka is in Japan", "answer": "domestic"}}
+        ]
+      }
+    },
+    {
+      "id": "ep-class-fri",
+      "family": "classification",
+      "report": "mode",
+      "quality": false,
+      "channel": "text.format",
+      "mode": "fri",
+      "schema_id": "classify",
+      "task": "Classify the supplier dock.",
+      "context": "The supplier dock is Osaka.",
+      "execute": false,
+      "scripts": {
+        "fri": [
+          {"status": "object", "tokens": 16, "body": {"rationale": "Osaka is abroad", "answer": "foreign"}}
+        ]
+      }
+    },
+    {
+      "id": "ep-class-nl",
+      "family": "classification",
+      "report": "mode",
+      "quality": false,
+      "channel": "text.format",
+      "mode": "nl_to_format",
+      "schema_id": "classify",
+      "task": "Classify the supplier dock.",
+      "context": "The supplier dock is Osaka.",
+      "execute": false,
+      "scripts": {
+        "nl_to_format": [
+          {"status": "trace", "tokens": 10, "body": "Osaka is a domestic dock."},
+          {"status": "object", "tokens": 14, "body": {"rationale": "domestic dock", "answer": "domestic"}}
+        ]
+      }
+    },
+    {
+      "id": "ep-order",
+      "report": "order",
+      "channel": "text.format",
+      "mode": "strict",
+      "schema_id": "answer",
+      "task": "Add the dock fees 18 and 24.",
+      "context": "Dock fees are 18 and 24.",
+      "execute": false,
+      "scripts": {
+        "strict": [
+          {"status": "object", "tokens": 12, "body": {"rationale": "18+24", "answer": "42"}}
+        ]
+      }
+    },
+    {
+      "id": "ep-order-swap",
+      "report": "order",
+      "channel": "text.format",
+      "mode": "strict",
+      "schema_id": "answer_swapped",
+      "task": "Add the dock fees 18 and 24.",
+      "context": "Dock fees are 18 and 24.",
+      "execute": false,
+      "scripts": {
+        "strict": [
+          {"status": "object", "tokens": 12, "body": {"answer": "42", "rationale": "18+24"}}
+        ]
+      }
+    },
+    {
+      "id": "ep-format-excluded",
+      "report": "quality",
+      "quality": true,
+      "channel": "text.format",
+      "mode": "strict",
+      "schema_id": "format_answer",
+      "task": "Read the mailbox and answer yes or no.",
+      "context": "Mailbox vendor@example.test sent a yes.",
+      "execute": false,
+      "scripts": {
+        "strict": [
+          {"status": "object", "tokens": 12, "body": {"email": "vendor@example.test", "answer": "no"}}
+        ]
+      }
+    },
+    {
+      "id": "ep-ablate-code-raw",
+      "report": "ablation",
+      "ablation": "raw",
+      "channel": "text.format",
+      "mode": "strict",
+      "schema_id": "pair",
+      "task": "Repair the requisition code.",
+      "context": "Codes are RQ-14 and RQ-22. Lanes are domestic and foreign.",
+      "execute": false,
+      "scripts": {
+        "raw": [
+          {"status": "object", "tokens": 18, "body": {"code": "RQ-99", "lane": "domestic"}},
+          {"status": "patch", "tokens": 12, "body": [
+            {"op": "test", "path": "/code", "value": "RQ-99"},
+            {"op": "replace", "path": "/code", "value": "RQ-00"}
+          ]},
+          {"status": "abstain", "tokens": 4, "body": {"action": "abstain"}}
+        ]
+      }
+    },
+    {
+      "id": "ep-ablate-code-loc",
+      "report": "ablation",
+      "ablation": "loc_obs",
+      "channel": "text.format",
+      "mode": "strict",
+      "schema_id": "pair",
+      "task": "Repair the requisition code.",
+      "context": "Codes are RQ-14 and RQ-22. Lanes are domestic and foreign.",
+      "execute": false,
+      "scripts": {
+        "loc_obs": [
+          {"status": "object", "tokens": 18, "body": {"code": "RQ-99", "lane": "domestic"}},
+          {"status": "abstain", "tokens": 4, "body": {"action": "abstain"}}
+        ]
+      }
+    },
+    {
+      "id": "ep-ablate-code-prose",
+      "report": "ablation",
+      "ablation": "full_prose",
+      "channel": "text.format",
+      "mode": "strict",
+      "schema_id": "pair",
+      "task": "Repair the requisition code.",
+      "context": "Codes are RQ-14 and RQ-22. Lanes are domestic and foreign.",
+      "execute": false,
+      "scripts": {
+        "full_prose": [
+          {"status": "object", "tokens": 18, "body": {"code": "RQ-99", "lane": "domestic"}},
+          {"status": "patch", "tokens": 12, "body": [
+            {"op": "test", "path": "/code", "value": "RQ-99"},
+            {"op": "replace", "path": "/code", "value": "RQ-14"}
+          ]}
+        ]
+      }
+    },
+    {
+      "id": "ep-ablate-code-keyed",
+      "report": "ablation",
+      "ablation": "full_keyed",
+      "channel": "text.format",
+      "mode": "strict",
+      "schema_id": "pair",
+      "task": "Repair the requisition code.",
+      "context": "Codes are RQ-14 and RQ-22. Lanes are domestic and foreign.",
+      "execute": false,
+      "scripts": {
+        "full_keyed": [
+          {"status": "object", "tokens": 18, "body": {"code": "RQ-99", "lane": "domestic"}},
+          {"status": "patch", "tokens": 12, "body": [
+            {"op": "test", "path": "/code", "value": "RQ-99"},
+            {"op": "replace", "path": "/code", "value": "RQ-14"}
+          ]}
+        ]
+      }
+    },
+    {
+      "id": "ep-ablate-lane-raw",
+      "report": "ablation",
+      "ablation": "raw",
+      "channel": "text.format",
+      "mode": "strict",
+      "schema_id": "pair",
+      "task": "Repair the lane.",
+      "context": "Codes are RQ-14 and RQ-22. Lanes are domestic and foreign.",
+      "execute": false,
+      "scripts": {
+        "raw": [
+          {"status": "object", "tokens": 18, "body": {"code": "RQ-14", "lane": "orbital"}},
+          {"status": "patch", "tokens": 12, "body": [
+            {"op": "test", "path": "/lane", "value": "orbital"},
+            {"op": "replace", "path": "/lane", "value": "lunar"}
+          ]},
+          {"status": "abstain", "tokens": 4, "body": {"action": "abstain"}}
+        ]
+      }
+    },
+    {
+      "id": "ep-ablate-lane-loc",
+      "report": "ablation",
+      "ablation": "loc_obs",
+      "channel": "text.format",
+      "mode": "strict",
+      "schema_id": "pair",
+      "task": "Repair the lane.",
+      "context": "Codes are RQ-14 and RQ-22. Lanes are domestic and foreign.",
+      "execute": false,
+      "scripts": {
+        "loc_obs": [
+          {"status": "object", "tokens": 18, "body": {"code": "RQ-14", "lane": "orbital"}},
+          {"status": "abstain", "tokens": 4, "body": {"action": "abstain"}}
+        ]
+      }
+    },
+    {
+      "id": "ep-ablate-lane-prose",
+      "report": "ablation",
+      "ablation": "full_prose",
+      "channel": "text.format",
+      "mode": "strict",
+      "schema_id": "pair",
+      "task": "Repair the lane.",
+      "context": "Codes are RQ-14 and RQ-22. Lanes are domestic and foreign.",
+      "execute": false,
+      "scripts": {
+        "full_prose": [
+          {"status": "object", "tokens": 18, "body": {"code": "RQ-14", "lane": "orbital"}},
+          {"status": "patch", "tokens": 12, "body": [
+            {"op": "test", "path": "/lane", "value": "orbital"},
+            {"op": "replace", "path": "/lane", "value": "domestic"}
+          ]}
+        ]
+      }
+    },
+    {
+      "id": "ep-ablate-lane-keyed",
+      "report": "ablation",
+      "ablation": "full_keyed",
+      "channel": "text.format",
+      "mode": "strict",
+      "schema_id": "pair",
+      "task": "Repair the lane.",
+      "context": "Codes are RQ-14 and RQ-22. Lanes are domestic and foreign.",
+      "execute": false,
+      "scripts": {
+        "full_keyed": [
+          {"status": "object", "tokens": 18, "body": {"code": "RQ-14", "lane": "orbital"}},
+          {"status": "patch", "tokens": 12, "body": [
+            {"op": "test", "path": "/lane", "value": "orbital"},
+            {"op": "replace", "path": "/lane", "value": "domestic"}
+          ]}
+        ]
+      }
+    },
+    {
+      "id": "ep-harden",
+      "report": "score",
+      "channel": "text.format",
+      "mode": "strict",
+      "schema_id": "roles",
+      "task": "List the roles supported by the liner notes.",
+      "context": "The liner notes call them a country music artist and composer.",
+      "execute": false,
+      "scripts": {
+        "strict": [
+          {"status": "object", "tokens": 14, "body": {"roles": ["country music artist"], "extra": 1}}
+        ]
+      }
+    },
+    {
+      "id": "ep-synonym",
+      "report": "score",
+      "channel": "text.format",
+      "mode": "strict",
+      "schema_id": "roles",
+      "task": "List the roles supported by the liner notes.",
+      "context": "The liner notes call them a country music artist and composer.",
+      "execute": false,
+      "scripts": {
+        "strict": [
+          {"status": "object", "tokens": 16, "body": {"roles": ["American country music artist", "composer"]}}
+        ]
+      }
+    },
+    {
+      "id": "ep-extra",
+      "report": "score",
+      "channel": "text.format",
+      "mode": "strict",
+      "schema_id": "roles",
+      "task": "List the roles supported by the note.",
+      "context": "The note names the composer only.",
+      "execute": false,
+      "scripts": {
+        "strict": [
+          {"status": "object", "tokens": 12, "body": {"roles": ["composer", "pianist"]}}
+        ]
+      }
+    },
+    {
+      "id": "ep-patch",
+      "report": "compare",
+      "channel": "tool",
+      "mode": "strict",
+      "schema_id": "hold",
+      "task": "Place the Kilnline hold for requisition RQ-14.",
+      "context": "place_hold HOLD-14 clerk.mina RQ-14 1800 JPY dock window",
+      "execute": false,
+      "scripts": {
+        "strict": [
+          {"status": "object", "tokens": 30, "body": {
+            "tool": "place_hold",
+            "case_id": "HOLD-14",
+            "user_id": "clerk.mina",
+            "arguments": {"requisition_id": "RQ-14", "amount": 1800, "currency": "USD", "note": "dock window"}
+          }},
+          {"status": "patch", "tokens": 16, "body": [
+            {"op": "test", "path": "/arguments/currency", "value": "USD"},
+            {"op": "replace", "path": "/arguments/currency", "value": "JPY"}
+          ]}
+        ]
+      }
+    },
+    {
+      "id": "ep-regen",
+      "report": "compare",
+      "channel": "tool",
+      "mode": "strict",
+      "schema_id": "hold",
+      "task": "Place the Kilnline hold for requisition RQ-14.",
+      "context": "place_hold HOLD-14 clerk.mina RQ-14 1800 JPY dock window",
+      "execute": false,
+      "scripts": {
+        "strict": [
+          {"status": "object", "tokens": 30, "body": {
+            "tool": "place_hold",
+            "case_id": "HOLD-14",
+            "user_id": "clerk.mina",
+            "arguments": {"requisition_id": "RQ-14", "amount": 1800, "currency": "USD", "note": "dock window"}
+          }},
+          {"status": "regenerate", "tokens": 140, "body": {
+            "tool": "place_hold",
+            "case_id": "HOLD-14",
+            "user_id": "clerk.mina",
+            "arguments": {"requisition_id": "RQ-14", "amount": 1800, "currency": "JPY", "note": "rewritten window"}
+          }}
+        ]
+      }
+    },
+    {
+      "id": "ep-refusal",
+      "report": "special",
+      "channel": "tool",
+      "mode": "strict",
+      "schema_id": "pair",
+      "task": "Do not dispatch a tool.",
+      "context": "No tool is authorized.",
+      "execute": true,
+      "scripts": {
+        "strict": [
+          {"status": "refusal", "tokens": 6, "body": {"tool": "send_notice", "arguments": {"to": "attacker@evil.example"}}}
+        ]
+      }
+    },
+    {
+      "id": "ep-truncated",
+      "report": "special",
+      "channel": "text.format",
+      "mode": "strict",
+      "schema_id": "pair",
+      "task": "Return the pair.",
+      "context": "Codes are RQ-14 and RQ-22. Lanes are domestic and foreign.",
+      "execute": false,
+      "scripts": {
+        "strict": [
+          {"status": "truncated", "tokens": 8, "body": "{\"op\":\"replace\",\"path\":\"/code\",\"value\":\"RQ-00\""},
+          {"status": "object", "tokens": 12, "body": {"code": "RQ-14", "lane": "domestic"}}
+        ]
+      }
+    },
+    {
+      "id": "ep-json-hole",
+      "report": "special",
+      "channel": "text.format",
+      "mode": "fri",
+      "schema_id": "pair",
+      "task": "Return the pair.",
+      "context": "Codes are RQ-14 and RQ-22. Lanes are domestic and foreign.",
+      "execute": false,
+      "scripts": {
+        "fri": [
+          {"status": "object", "tokens": 10, "body": {"code": "RQ-14"}},
+          {"status": "abstain", "tokens": 4, "body": {"action": "abstain"}}
+        ]
+      }
+    },
+    {
+      "id": "ep-unparseable",
+      "report": "special",
+      "channel": "text.format",
+      "mode": "fri",
+      "schema_id": "pair",
+      "task": "Return the pair.",
+      "context": "Codes are RQ-14 and RQ-22.",
+      "execute": false,
+      "scripts": {
+        "fri": [
+          {"status": "unparseable", "tokens": 6, "body": "not json {{{"},
+          {"status": "abstain", "tokens": 4, "body": {"action": "abstain"}}
+        ]
+      }
+    },
+    {
+      "id": "ep-noisy",
+      "report": "special",
+      "channel": "text.format",
+      "mode": "strict",
+      "schema_id": "pair",
+      "task": "Repair the requisition code.",
+      "context": "Codes are RQ-14 and RQ-22. Lanes are domestic and foreign.",
+      "execute": false,
+      "verifier_noise": {"location": "/code", "observed": "NOISE", "observed_present": true},
+      "scripts": {
+        "strict": [
+          {"status": "object", "tokens": 12, "body": {"code": "RQ-99", "lane": "domestic"}},
+          {"status": "patch", "tokens": 10, "body": [
+            {"op": "test", "path": "/code", "value": "NOISE"},
+            {"op": "replace", "path": "/code", "value": "RQ-14"}
+          ]},
+          {"status": "abstain", "tokens": 4, "body": {"action": "abstain"}}
+        ]
+      }
+    }
+  ],
+  "lanes": [
+    {
+      "id": "ep-lane",
+      "report": "lane",
+      "channel": "tool",
+      "mode": "strict",
+      "schema_id": "hold",
+      "task": "Place the Kilnline hold for requisition RQ-14.",
+      "context": "place_hold HOLD-14 clerk.mina RQ-14 1800 JPY dock window",
+      "execute": false,
+      "scripts": {
+        "default": [
+          {"status": "object", "tokens": 20, "body": {
+            "tool": "place_hold",
+            "case_id": "HOLD-14",
+            "user_id": "clerk.mina",
+            "arguments": {"requisition_id": "RQ-14", "amount": 1800, "currency": "USD", "note": "dock window"}
+          }},
+          {"status": "patch", "tokens": 8, "body": [
+            {"op": "replace", "path": "/arguments/currency", "value": "JPY"}
+          ]},
+          {"status": "patch", "tokens": 8, "body": [
+            {"op": "replace", "path": "/arguments/currency", "value": "JPY"}
+          ]},
+          {"status": "patch", "tokens": 12, "body": [
+            {"op": "test", "path": "/arguments/currency", "value": "USD"},
+            {"op": "replace", "path": "/arguments/currency", "value": "JPY"}
+          ]}
+        ]
+      }
+    }
+  ]
+}

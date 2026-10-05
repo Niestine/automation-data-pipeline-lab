@@ -1,0 +1,15 @@
+{
+  "title": "LLM Agent Evaluation & Guardrails Lab — Case 005",
+  "summary": "Offline Kilnline lab that admits schemas, validates structured tool calls, repairs them with masked JSON Patch or abstain, and scores leaf accuracy apart from injection utility.",
+  "skills": [
+    "LLM",
+    "agents",
+    "evaluation",
+    "structured outputs",
+    "guardrails",
+    "testing"
+  ],
+  "verification": "python -m unittest discover -s projects/llm-agent-evaluation-lab-case-005/tests -v",
+  "research_backed": true,
+  "reference_count": 8
+}
