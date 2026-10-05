@@ -1,0 +1,15 @@
+{
+  "title": "Data Quality ETL Lab",
+  "summary": "Harbor Ledger seals a synthetic weekly apparel catalog through typed CSV normalization, four read-only error detectors, duplicate decisions, and a canonical anomaly digest.",
+  "skills": [
+    "Python",
+    "ETL",
+    "CSV",
+    "data quality",
+    "validation",
+    "deduplication"
+  ],
+  "verification": "python -m unittest discover -s projects/data-quality-etl-lab/tests -v",
+  "research_backed": true,
+  "reference_count": 9
+}

@@ -1,0 +1,19 @@
+# harbor ledger synthetic week drop
+
+listing_id,supplier_code,style_code,department,title,color,wholesale_usd,listed_on
+HL001,NORTH,OC100,outerwear,Navy Wool Coat,navy,86.00,2026-03-02
+HL002,NORTH,OC100,outerwear,Wool Coat Navy,navy,86.00,2026-03-02
+HL003,SOUTH,DN200,denim,Raw Selvedge Jean,indigo,72.50,2026-03-04
+HL004,SOUTH,DN200,shirting,Raw Selvedge Jean,indigo,72.50,2026-03-04
+HL005,EAST,KT300,knit,Grey Loop Tee,grey,18.00,2026-02-11
+HL006,EAST,KT301,shirting,Poplin Spare,white,22.00,2026-02-12
+HL007,NORTH,OC110,outerwear,Black Rain Shell,black,910.00,2026-03-08
+HL008,SOUTH,ＫＴ３１０,knit,Navy Box Tee,navy,19.00,2026-03-01
+HL009,NORTH,SH400,shirting,White Poplin Shirt,white,NA,2026-01-20
+HL010,NORTH,SH401,shirting,Checked Overshirt,blue,30.00,01/02/2020
+HL011,NORTH,SH402
+HL012,NORTH,SH403,shirting,"Coat, Hooded",sand,40.00,2026-03-05
+HL013,NORTH,OC120,outerwear,Field Parka,olive,64.00,2026-03-06
+HL014,SOUTH,DN210,denim,Straight Jean,indigo,68.00,2026-03-07
+HL015,NORTH,SH410,shirting,Oxford Shirt,blue,36.00,2026-03-03
+HL016,EAST,KT320,knit,Crew Neck,navy,21.00,2026-02-18
