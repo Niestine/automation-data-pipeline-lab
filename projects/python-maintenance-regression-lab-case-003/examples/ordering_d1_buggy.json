@@ -1,0 +1,27 @@
+{
+  "change_points": [],
+  "coverage": "",
+  "d": 1,
+  "delays": 2,
+  "final_cells": {"ready": 1, "value": 1},
+  "gil": {
+    "PYTHON_GIL": null,
+    "Py_GIL_DISABLED": null,
+    "gil_enabled": null,
+    "gil_probe": "fixture"
+  },
+  "k": 4,
+  "max_reentrancy": 1,
+  "n_max": 2,
+  "policy": "replay",
+  "preemptions": 0,
+  "python": "fixture",
+  "revision": "buggy",
+  "schedule": [2, 2, 1, 1],
+  "schedules_used": 1,
+  "schema": 1,
+  "seed": 0,
+  "steps": 4,
+  "subject": "ordering_d1",
+  "terminal": "fail"
+}
