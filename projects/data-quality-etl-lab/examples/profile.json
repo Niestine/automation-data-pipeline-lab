@@ -1,0 +1,25 @@
+{
+  "seed": 4180,
+  "replacement_threshold": 0,
+  "detector_order": ["pattern_type", "constraint", "outlier", "duplicate"],
+  "repair_between_detectors": false,
+  "outlier": {"method": "modified_z", "threshold": "3.5", "minimum_rows": 5},
+  "dedup": {
+    "window": 3,
+    "q": 3,
+    "refit": false,
+    "jaro_agree": "0.99",
+    "edit_agree": 0,
+    "cosine_agree": "0.70",
+    "monge_agree": "0.80",
+    "link_threshold": "2",
+    "possible_threshold": "0.5",
+    "blocking_keys": ["style_code", "title_prefix"],
+    "fields": [
+      {"name": "style_code", "kind": "short", "m": "0.99", "u": "0.01"},
+      {"name": "title", "kind": "token", "m": "0.95", "u": "0.05"},
+      {"name": "color", "kind": "short", "m": "0.90", "u": "0.20"}
+    ]
+  },
+  "retry": {"attempts": 3, "delays_ms": [0, 1, 2]}
+}

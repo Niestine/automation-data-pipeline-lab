@@ -1,0 +1,74 @@
+{
+  "name": "harbor-ledger-week-drop",
+  "missingValues": ["", "NA", "-"],
+  "primaryKey": ["listing_id"],
+  "dialect": {
+    "delimiter": ",",
+    "quote": "\"",
+    "header": true,
+    "skip_rows": 0,
+    "skip_blank_rows": true,
+    "comment_prefix": "#",
+    "trim": false,
+    "encoding": "utf-8"
+  },
+  "fields": [
+    {
+      "name": "listing_id",
+      "type": "string",
+      "identifier_fold": true,
+      "constraints": {"required": true, "pattern": "[A-Z0-9]+"}
+    },
+    {
+      "name": "supplier_code",
+      "type": "string",
+      "constraints": {"required": true, "enum": ["NORTH", "SOUTH", "EAST"]}
+    },
+    {
+      "name": "style_code",
+      "type": "string",
+      "identifier_fold": true,
+      "constraints": {"required": true, "pattern": "[A-Z0-9]+"}
+    },
+    {
+      "name": "department",
+      "type": "string",
+      "constraints": {"required": true, "enum": ["outerwear", "knit", "denim", "shirting"]}
+    },
+    {
+      "name": "title",
+      "type": "string",
+      "constraints": {"required": true, "minLength": 3, "maxLength": 80}
+    },
+    {
+      "name": "color",
+      "type": "string",
+      "constraints": {"required": true}
+    },
+    {
+      "name": "wholesale_usd",
+      "type": "number",
+      "constraints": {"required": true, "minimum": "5", "maximum": "400"}
+    },
+    {
+      "name": "listed_on",
+      "type": "date",
+      "format": "YYYY-MM-DD",
+      "constraints": {"required": true}
+    }
+  ],
+  "rules": [
+    {
+      "id": "style_department",
+      "kind": "fd",
+      "determinant": "style_code",
+      "dependent": "department"
+    },
+    {
+      "id": "east_knit",
+      "kind": "constant",
+      "when": {"field": "supplier_code", "equals": "EAST"},
+      "then": {"field": "department", "equals": "knit"}
+    }
+  ]
+}
