@@ -1,0 +1,8 @@
+{
+  "type": "urn:batchnote:problem:no-input",
+  "title": "Input unavailable",
+  "status": 1,
+  "detail": "cannot read lane.txt: No such file or directory",
+  "locator": {"path": "lane.txt"},
+  "vendorNote": "synthetic extension"
+}

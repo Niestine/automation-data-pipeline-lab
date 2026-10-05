@@ -1,0 +1,14 @@
+{
+  "title": "Python Maintenance & Regression Lab — Case 009",
+  "summary": "A note-file CLI that keeps a frozen 0/1/2 exit contract, continues after bad operands, and locks the stderr problem record with backwards-compatibility tests.",
+  "skills": [
+    "Python",
+    "debugging",
+    "regression testing",
+    "compatibility",
+    "logging"
+  ],
+  "verification": "python -m unittest discover -s projects/python-maintenance-regression-lab-case-009/tests -v",
+  "research_backed": true,
+  "reference_count": 7
+}
