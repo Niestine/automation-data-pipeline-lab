@@ -1,0 +1,185 @@
+[
+  {
+    "name": "add-missing-parent",
+    "layer": "apply",
+    "doc": {"a": 1},
+    "ops": [{"op": "add", "path": "/b/c", "value": 1}],
+    "ok": false,
+    "reason": "parent_missing"
+  },
+  {
+    "name": "dash-append",
+    "layer": "apply",
+    "doc": {"a": [1]},
+    "ops": [{"op": "add", "path": "/a/-", "value": 2}],
+    "ok": true,
+    "expect": {"a": [1, 2]}
+  },
+  {
+    "name": "tilde-escapes",
+    "layer": "apply",
+    "doc": {"~": 1, "/": 2},
+    "ops": [
+      {"op": "replace", "path": "/~0", "value": 3},
+      {"op": "replace", "path": "/~1", "value": 4}
+    ],
+    "ok": true,
+    "expect": {"~": 3, "/": 4}
+  },
+  {
+    "name": "test-mismatch-stops-replace",
+    "layer": "apply",
+    "doc": {"a": 10},
+    "ops": [
+      {"op": "test", "path": "/a", "value": "10"},
+      {"op": "replace", "path": "/a", "value": 11}
+    ],
+    "ok": false,
+    "reason": "test_mismatch"
+  },
+  {
+    "name": "nested-array-remove",
+    "layer": "apply",
+    "doc": {"a": {"b": [{"c": 1}, {"c": 2}]}},
+    "ops": [{"op": "remove", "path": "/a/b/0"}],
+    "ok": true,
+    "expect": {"a": {"b": [{"c": 2}]}}
+  },
+  {
+    "name": "missing-test",
+    "layer": "mask",
+    "doc": {"currency": "USD"},
+    "ops": [{"op": "replace", "path": "/currency", "value": "JPY"}],
+    "repair": {"location": "/currency", "observed": "USD", "observed_present": true},
+    "ok": false,
+    "reason": "missing_test"
+  },
+  {
+    "name": "immutable-path",
+    "layer": "mask",
+    "doc": {"tool": "place_hold", "case_id": "HOLD-14"},
+    "ops": [{"op": "test", "path": "/tool", "value": "place_hold"}, {"op": "replace", "path": "/tool", "value": "send_notice"}],
+    "repair": {"location": "/tool", "observed": "place_hold", "observed_present": true},
+    "ok": false,
+    "reason": "immutable_path"
+  },
+  {
+    "name": "over-budget",
+    "layer": "mask",
+    "doc": {"a": 1, "b": 2, "c": 3},
+    "op_budget": 2,
+    "ops": [
+      {"op": "test", "path": "/a", "value": 1},
+      {"op": "replace", "path": "/a", "value": 9},
+      {"op": "test", "path": "/b", "value": 2},
+      {"op": "replace", "path": "/b", "value": 8},
+      {"op": "test", "path": "/c", "value": 3},
+      {"op": "replace", "path": "/c", "value": 7}
+    ],
+    "repair": {"location": "/a", "observed": 1, "observed_present": true},
+    "ok": false,
+    "reason": "over_budget"
+  },
+  {
+    "name": "move-disabled",
+    "layer": "mask",
+    "doc": {"a": 1, "b": 2},
+    "ops": [{"op": "move", "from": "/a", "path": "/c"}],
+    "allow_move_copy": false,
+    "ok": false,
+    "reason": "move_copy_disabled"
+  },
+  {
+    "name": "copy-disabled",
+    "layer": "mask",
+    "doc": {"a": 1},
+    "ops": [{"op": "copy", "from": "/a", "path": "/b"}],
+    "allow_move_copy": false,
+    "ok": false,
+    "reason": "move_copy_disabled"
+  },
+  {
+    "name": "move-prefix",
+    "layer": "mask",
+    "doc": {"a": {"b": 1}},
+    "ops": [{"op": "move", "from": "/a", "path": "/a/b"}],
+    "allow_move_copy": true,
+    "ok": false,
+    "reason": "move_prefix"
+  },
+  {
+    "name": "move-applied",
+    "layer": "apply",
+    "doc": {"a": {"x": 1}, "b": {}},
+    "ops": [{"op": "move", "from": "/a/x", "path": "/b/x"}],
+    "ok": true,
+    "expect": {"a": {}, "b": {"x": 1}}
+  },
+  {
+    "name": "copy-applied",
+    "layer": "apply",
+    "doc": {"a": {"x": 1}, "b": {}},
+    "ops": [{"op": "copy", "from": "/a/x", "path": "/b/x"}],
+    "ok": true,
+    "expect": {"a": {"x": 1}, "b": {"x": 1}}
+  },
+  {
+    "name": "add-index-past-length",
+    "layer": "apply",
+    "doc": {"a": [1]},
+    "ops": [{"op": "add", "path": "/a/2", "value": 3}],
+    "ok": false,
+    "reason": "index_oob"
+  },
+  {
+    "name": "later-error-discards-earlier-ops",
+    "layer": "apply",
+    "doc": {"a": 1},
+    "ops": [{"op": "replace", "path": "/a", "value": 2}, {"op": "remove", "path": "/missing"}],
+    "ok": false,
+    "reason": "not_found"
+  },
+  {
+    "name": "test-then-replace-admitted",
+    "layer": "mask",
+    "doc": {"currency": "USD"},
+    "ops": [{"op": "test", "path": "/currency", "value": "USD"}, {"op": "replace", "path": "/currency", "value": "JPY"}],
+    "repair": {"location": "/currency", "observed": "USD", "observed_present": true},
+    "ok": true,
+    "reason": "ok"
+  },
+  {
+    "name": "test-not-the-observed-value",
+    "layer": "mask",
+    "doc": {"currency": "USD"},
+    "ops": [{"op": "test", "path": "/currency", "value": "EUR"}, {"op": "replace", "path": "/currency", "value": "JPY"}],
+    "repair": {"location": "/currency", "observed": "USD", "observed_present": true},
+    "ok": false,
+    "reason": "test_observed_mismatch"
+  },
+  {
+    "name": "off-location-test-mismatch",
+    "layer": "mask",
+    "doc": {"currency": "USD", "note": "dock window"},
+    "ops": [{"op": "test", "path": "/note", "value": "other"}, {"op": "replace", "path": "/note", "value": "x"}],
+    "repair": {"location": "/currency", "observed": "USD", "observed_present": true},
+    "ok": false,
+    "reason": "test_document_mismatch"
+  },
+  {
+    "name": "bad-pointer",
+    "layer": "mask",
+    "doc": {"a": 1},
+    "ops": [{"op": "add", "path": "a", "value": 2}],
+    "ok": false,
+    "reason": "bad_pointer"
+  },
+  {
+    "name": "not-an-array",
+    "layer": "mask",
+    "doc": {"a": 1},
+    "ops": {"op": "add", "path": "/b", "value": 2},
+    "ok": false,
+    "reason": "not_array"
+  }
+]

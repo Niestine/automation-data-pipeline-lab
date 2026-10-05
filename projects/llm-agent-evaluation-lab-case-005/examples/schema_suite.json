@@ -1,0 +1,161 @@
+[
+  {
+    "id": "sch-enum",
+    "schema": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["color"],
+      "properties": {"color": {"type": "string", "enum": ["red", "blue"]}}
+    },
+    "tests": [
+      {"description": "enum member", "data": {"color": "red"}, "valid": true, "sample": true},
+      {"description": "enum miss", "data": {"color": "green"}, "valid": false, "sample": false}
+    ]
+  },
+  {
+    "id": "sch-const",
+    "schema": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["lane"],
+      "properties": {"lane": {"const": "domestic"}}
+    },
+    "tests": [
+      {"description": "const hit", "data": {"lane": "domestic"}, "valid": true, "sample": true},
+      {"description": "const miss", "data": {"lane": "foreign"}, "valid": false, "sample": false}
+    ]
+  },
+  {
+    "id": "sch-required",
+    "schema": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["a", "b"],
+      "properties": {"a": {"type": "integer"}, "b": {"type": "integer"}}
+    },
+    "tests": [
+      {"description": "both present", "data": {"a": 1, "b": 2}, "valid": true, "sample": true},
+      {"description": "json object missing b", "data": {"a": 1}, "valid": false, "sample": false}
+    ]
+  },
+  {
+    "id": "sch-additional",
+    "schema": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["a"],
+      "properties": {"a": {"type": "integer"}}
+    },
+    "tests": [
+      {"description": "closed object", "data": {"a": 1}, "valid": true, "sample": true},
+      {"description": "extra leaf", "data": {"a": 1, "extra": 1}, "valid": false, "sample": false}
+    ]
+  },
+  {
+    "id": "sch-type",
+    "schema": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["amount"],
+      "properties": {"amount": {"type": "integer"}}
+    },
+    "tests": [
+      {"description": "integer", "data": {"amount": 1}, "valid": true, "sample": true},
+      {"description": "numeric string", "data": {"amount": "1"}, "valid": false, "sample": false}
+    ]
+  },
+  {
+    "id": "sch-minimum",
+    "schema": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["amount"],
+      "properties": {"amount": {"type": "integer", "minimum": 1}}
+    },
+    "tests": [
+      {"description": "at minimum", "data": {"amount": 1}, "valid": true, "sample": true},
+      {"description": "below minimum", "data": {"amount": 0}, "valid": false, "sample": true}
+    ]
+  },
+  {
+    "id": "sch-pattern",
+    "schema": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["code"],
+      "properties": {"code": {"type": "string", "pattern": "^RQ-[0-9]{2}$"}}
+    },
+    "tests": [
+      {"description": "pattern hit", "data": {"code": "RQ-14"}, "valid": true, "sample": true},
+      {"description": "pattern miss", "data": {"code": "nope"}, "valid": false, "sample": true}
+    ]
+  },
+  {
+    "id": "sch-format",
+    "schema": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["email"],
+      "properties": {"email": {"type": "string", "format": "email"}}
+    },
+    "tests": [
+      {"description": "email", "data": {"email": "vendor@example.test"}, "valid": true, "sample": true},
+      {"description": "not an email", "data": {"email": "not-an-email"}, "valid": false, "sample": true}
+    ]
+  },
+  {
+    "id": "sch-unique",
+    "schema": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["tags"],
+      "properties": {"tags": {"type": "array", "uniqueItems": true, "items": {"type": "string"}}}
+    },
+    "tests": [
+      {"description": "unique tags", "data": {"tags": ["a", "b"]}, "valid": true, "sample": true},
+      {"description": "duplicate tag", "data": {"tags": ["a", "a"]}, "valid": false, "sample": true}
+    ]
+  },
+  {
+    "id": "sch-allof",
+    "schema": {
+      "allOf": [
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["a"],
+          "properties": {"a": {"type": "string"}}
+        }
+      ]
+    },
+    "tests": [
+      {"description": "allOf string", "data": {"a": "x"}, "valid": true, "sample": false},
+      {"description": "allOf type miss", "data": {"a": 1}, "valid": false, "sample": false},
+      {"description": "allOf extra", "data": {"a": "x", "b": 1}, "valid": false, "sample": false}
+    ]
+  },
+  {
+    "id": "sch-if",
+    "schema": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["kind", "code"],
+      "properties": {
+        "kind": {"type": "string"},
+        "code": {"type": "string"}
+      },
+      "if": {
+        "type": "object",
+        "properties": {"kind": {"const": "rq"}},
+        "required": ["kind"]
+      },
+      "then": {"properties": {"code": {"pattern": "^RQ-"}}},
+      "else": {"properties": {"code": {"minLength": 1}}}
+    },
+    "tests": [
+      {"description": "if branch", "data": {"kind": "rq", "code": "RQ-1"}, "valid": true, "sample": false},
+      {"description": "then pattern miss", "data": {"kind": "rq", "code": "XX"}, "valid": false, "sample": false},
+      {"description": "else branch", "data": {"kind": "other", "code": "Z"}, "valid": true, "sample": false}
+    ]
+  }
+]
