@@ -1,0 +1,53 @@
+{
+  "now": "2024-06-01T00:00:00Z",
+  "reader": "tolerant",
+  "method": "GET",
+  "path": "/gauges/{gauge_id}",
+  "document": {
+    "openapi": "3.1.1",
+    "info": {
+      "title": "Harbor Gauge Bulletin",
+      "version": "1.4.0",
+      "description": "Synthetic tide readings for one harbor gauge."
+    },
+    "paths": {
+      "/gauges/{gauge_id}": {
+        "get": {
+          "operationId": "readGauge",
+          "deprecated": true,
+          "description": "Deprecated bulletin. Replacement: /stations/{station_id}",
+          "responses": {
+            "200": {
+              "description": "A gauge reading",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$id": "https://gauge.example.test/schemas/reading",
+                    "type": "object",
+                    "allOf": [{"$ref": "#/$defs/core"}],
+                    "$defs": {
+                      "core": {
+                        "type": "object",
+                        "required": ["gauge_id", "height_mm"],
+                        "properties": {
+                          "gauge_id": {"type": "string"},
+                          "height_mm": {"type": "integer"}
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "response": {
+    "status": 200,
+    "url": "https://gauge.example.test/gauges/g-1",
+    "headers": {},
+    "body": {"gauge_id": "g-1", "height_mm": 1200}
+  }
+}

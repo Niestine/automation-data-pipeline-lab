@@ -1,0 +1,14 @@
+{
+  "parse": [
+    {"input": "v1", "major": 1, "minor": 0, "patch": 0, "label": ""},
+    {"input": "v3.0.1-alpha", "major": 3, "minor": 0, "patch": 1, "label": "alpha"}
+  ],
+  "compare": [
+    {"left": "1.9.0", "right": "1.10.0", "kind": "minor_upgrade"},
+    {"left": "1.4.0", "right": "1.2.0", "kind": "minor_downgrade"},
+    {"left": "1.2.3-alpha", "right": "1.2.3-rc", "kind": "label_change"},
+    {"left": "1.2.3-alpha", "right": "1.2.3", "kind": "label_change"},
+    {"left": "1.2.3", "right": "1.2.3", "kind": "no_change"}
+  ],
+  "reject": ["20240101", "1.2.3+build"]
+}
