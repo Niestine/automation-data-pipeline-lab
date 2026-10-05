@@ -1,0 +1,15 @@
+{
+  "abstract_new_versions": 16053,
+  "best_case_consistent_apis": 517,
+  "breaking_change_types": 96,
+  "change_type_total": 195,
+  "dataset_section_versions": 15856,
+  "leaking_apis": 1970,
+  "never_breaking_apis": 927,
+  "non_breaking_change_types": 66,
+  "studied_apis": 3075,
+  "undecidable_change_types": 33,
+  "yasmin_breaking_versions": 251,
+  "yasmin_deprecation_related_apis": 219,
+  "yasmin_proactive_channel_apis": 3
+}
