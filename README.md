@@ -21,6 +21,8 @@ The command writes normalized.json, normalized.csv, and summary.json.
 
 ## Portfolio Labs
 
+- **[経済指標リサーチ・統計比較ラボ](projects/economic-indicator-research-lab/)** — 自主制作。実質GDP成長率・インフレ率・CPIの整理、共通基準年への換算、観測値のみの記述統計、欠損検査、CSVと日本語レポート、出典管理。公開デモは架空の数値。
+
 - **[LLM Agent Evaluation & Guardrails Lab — Case 005](projects/llm-agent-evaluation-lab-case-005/)** — Offline Kilnline lab that admits schemas, validates structured tool calls, repairs them with masked JSON Patch or abstain, and scores leaf accuracy apart from injection utility.
 
 - **[Python Maintenance & Regression Lab — Case 009](projects/python-maintenance-regression-lab-case-009/)** — A note-file CLI that keeps a frozen 0/1/2 exit contract, continues after bad operands, and locks the stderr problem record with backwards-compatibility tests.

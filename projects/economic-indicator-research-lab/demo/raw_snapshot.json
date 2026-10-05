@@ -1,0 +1,395 @@
+{
+  "countries": [
+    "AAA",
+    "BBB"
+  ],
+  "data_origin": "synthetic_fixture",
+  "description": "Imaginary countries and values; never actual economic statistics",
+  "end": 2024,
+  "fetched_at": null,
+  "pages": [
+    [
+      {
+        "page": 1,
+        "pages": 2,
+        "per_page": 15,
+        "total": 30
+      },
+      [
+        {
+          "country": {
+            "id": "AAA",
+            "value": "Imaginary AAA"
+          },
+          "countryiso3code": "AAA",
+          "date": "2020",
+          "indicator": {
+            "id": "FP.CPI.TOTL"
+          },
+          "value": 100
+        },
+        {
+          "country": {
+            "id": "AAA",
+            "value": "Imaginary AAA"
+          },
+          "countryiso3code": "AAA",
+          "date": "2021",
+          "indicator": {
+            "id": "FP.CPI.TOTL"
+          },
+          "value": 102
+        },
+        {
+          "country": {
+            "id": "AAA",
+            "value": "Imaginary AAA"
+          },
+          "countryiso3code": "AAA",
+          "date": "2022",
+          "indicator": {
+            "id": "FP.CPI.TOTL"
+          },
+          "value": 106
+        },
+        {
+          "country": {
+            "id": "AAA",
+            "value": "Imaginary AAA"
+          },
+          "countryiso3code": "AAA",
+          "date": "2023",
+          "indicator": {
+            "id": "FP.CPI.TOTL"
+          },
+          "value": 111
+        },
+        {
+          "country": {
+            "id": "AAA",
+            "value": "Imaginary AAA"
+          },
+          "countryiso3code": "AAA",
+          "date": "2024",
+          "indicator": {
+            "id": "FP.CPI.TOTL"
+          },
+          "value": 115
+        },
+        {
+          "country": {
+            "id": "AAA",
+            "value": "Imaginary AAA"
+          },
+          "countryiso3code": "AAA",
+          "date": "2020",
+          "indicator": {
+            "id": "FP.CPI.TOTL.ZG"
+          },
+          "value": 1
+        },
+        {
+          "country": {
+            "id": "AAA",
+            "value": "Imaginary AAA"
+          },
+          "countryiso3code": "AAA",
+          "date": "2021",
+          "indicator": {
+            "id": "FP.CPI.TOTL.ZG"
+          },
+          "value": 2
+        },
+        {
+          "country": {
+            "id": "AAA",
+            "value": "Imaginary AAA"
+          },
+          "countryiso3code": "AAA",
+          "date": "2022",
+          "indicator": {
+            "id": "FP.CPI.TOTL.ZG"
+          },
+          "value": 3.9
+        },
+        {
+          "country": {
+            "id": "AAA",
+            "value": "Imaginary AAA"
+          },
+          "countryiso3code": "AAA",
+          "date": "2023",
+          "indicator": {
+            "id": "FP.CPI.TOTL.ZG"
+          },
+          "value": 4.7
+        },
+        {
+          "country": {
+            "id": "AAA",
+            "value": "Imaginary AAA"
+          },
+          "countryiso3code": "AAA",
+          "date": "2024",
+          "indicator": {
+            "id": "FP.CPI.TOTL.ZG"
+          },
+          "value": 3.6
+        },
+        {
+          "country": {
+            "id": "AAA",
+            "value": "Imaginary AAA"
+          },
+          "countryiso3code": "AAA",
+          "date": "2020",
+          "indicator": {
+            "id": "NY.GDP.MKTP.KD.ZG"
+          },
+          "value": -2
+        },
+        {
+          "country": {
+            "id": "AAA",
+            "value": "Imaginary AAA"
+          },
+          "countryiso3code": "AAA",
+          "date": "2021",
+          "indicator": {
+            "id": "NY.GDP.MKTP.KD.ZG"
+          },
+          "value": 3
+        },
+        {
+          "country": {
+            "id": "AAA",
+            "value": "Imaginary AAA"
+          },
+          "countryiso3code": "AAA",
+          "date": "2022",
+          "indicator": {
+            "id": "NY.GDP.MKTP.KD.ZG"
+          },
+          "value": 2
+        },
+        {
+          "country": {
+            "id": "AAA",
+            "value": "Imaginary AAA"
+          },
+          "countryiso3code": "AAA",
+          "date": "2023",
+          "indicator": {
+            "id": "NY.GDP.MKTP.KD.ZG"
+          },
+          "value": 1
+        },
+        {
+          "country": {
+            "id": "AAA",
+            "value": "Imaginary AAA"
+          },
+          "countryiso3code": "AAA",
+          "date": "2024",
+          "indicator": {
+            "id": "NY.GDP.MKTP.KD.ZG"
+          },
+          "value": 1.5
+        }
+      ]
+    ],
+    [
+      {
+        "page": 2,
+        "pages": 2,
+        "per_page": 15,
+        "total": 30
+      },
+      [
+        {
+          "country": {
+            "id": "BBB",
+            "value": "Imaginary BBB"
+          },
+          "countryiso3code": "BBB",
+          "date": "2020",
+          "indicator": {
+            "id": "FP.CPI.TOTL"
+          },
+          "value": 100
+        },
+        {
+          "country": {
+            "id": "BBB",
+            "value": "Imaginary BBB"
+          },
+          "countryiso3code": "BBB",
+          "date": "2021",
+          "indicator": {
+            "id": "FP.CPI.TOTL"
+          },
+          "value": 101
+        },
+        {
+          "country": {
+            "id": "BBB",
+            "value": "Imaginary BBB"
+          },
+          "countryiso3code": "BBB",
+          "date": "2022",
+          "indicator": {
+            "id": "FP.CPI.TOTL"
+          },
+          "value": 104
+        },
+        {
+          "country": {
+            "id": "BBB",
+            "value": "Imaginary BBB"
+          },
+          "countryiso3code": "BBB",
+          "date": "2023",
+          "indicator": {
+            "id": "FP.CPI.TOTL"
+          },
+          "value": null
+        },
+        {
+          "country": {
+            "id": "BBB",
+            "value": "Imaginary BBB"
+          },
+          "countryiso3code": "BBB",
+          "date": "2024",
+          "indicator": {
+            "id": "FP.CPI.TOTL"
+          },
+          "value": 110
+        },
+        {
+          "country": {
+            "id": "BBB",
+            "value": "Imaginary BBB"
+          },
+          "countryiso3code": "BBB",
+          "date": "2020",
+          "indicator": {
+            "id": "FP.CPI.TOTL.ZG"
+          },
+          "value": 0
+        },
+        {
+          "country": {
+            "id": "BBB",
+            "value": "Imaginary BBB"
+          },
+          "countryiso3code": "BBB",
+          "date": "2021",
+          "indicator": {
+            "id": "FP.CPI.TOTL.ZG"
+          },
+          "value": 1
+        },
+        {
+          "country": {
+            "id": "BBB",
+            "value": "Imaginary BBB"
+          },
+          "countryiso3code": "BBB",
+          "date": "2022",
+          "indicator": {
+            "id": "FP.CPI.TOTL.ZG"
+          },
+          "value": 3
+        },
+        {
+          "country": {
+            "id": "BBB",
+            "value": "Imaginary BBB"
+          },
+          "countryiso3code": "BBB",
+          "date": "2023",
+          "indicator": {
+            "id": "FP.CPI.TOTL.ZG"
+          },
+          "value": null
+        },
+        {
+          "country": {
+            "id": "BBB",
+            "value": "Imaginary BBB"
+          },
+          "countryiso3code": "BBB",
+          "date": "2024",
+          "indicator": {
+            "id": "FP.CPI.TOTL.ZG"
+          },
+          "value": 2
+        },
+        {
+          "country": {
+            "id": "BBB",
+            "value": "Imaginary BBB"
+          },
+          "countryiso3code": "BBB",
+          "date": "2020",
+          "indicator": {
+            "id": "NY.GDP.MKTP.KD.ZG"
+          },
+          "value": -1
+        },
+        {
+          "country": {
+            "id": "BBB",
+            "value": "Imaginary BBB"
+          },
+          "countryiso3code": "BBB",
+          "date": "2021",
+          "indicator": {
+            "id": "NY.GDP.MKTP.KD.ZG"
+          },
+          "value": 4
+        },
+        {
+          "country": {
+            "id": "BBB",
+            "value": "Imaginary BBB"
+          },
+          "countryiso3code": "BBB",
+          "date": "2022",
+          "indicator": {
+            "id": "NY.GDP.MKTP.KD.ZG"
+          },
+          "value": 1.5
+        },
+        {
+          "country": {
+            "id": "BBB",
+            "value": "Imaginary BBB"
+          },
+          "countryiso3code": "BBB",
+          "date": "2023",
+          "indicator": {
+            "id": "NY.GDP.MKTP.KD.ZG"
+          },
+          "value": 0
+        },
+        {
+          "country": {
+            "id": "BBB",
+            "value": "Imaginary BBB"
+          },
+          "countryiso3code": "BBB",
+          "date": "2024",
+          "indicator": {
+            "id": "NY.GDP.MKTP.KD.ZG"
+          },
+          "value": 2
+        }
+      ]
+    ]
+  ],
+  "provider_last_updated": null,
+  "request_urls": [],
+  "start": 2020
+}

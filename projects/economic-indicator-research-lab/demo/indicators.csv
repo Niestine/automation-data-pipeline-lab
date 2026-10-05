@@ -1,0 +1,31 @@
+﻿data_origin,country,indicator,year,value,unit,status
+synthetic_fixture,AAA,FP.CPI.TOTL,2020,100.0,index (source-defined base; WDI publishes 2010=100),observed
+synthetic_fixture,AAA,FP.CPI.TOTL,2021,102.0,index (source-defined base; WDI publishes 2010=100),observed
+synthetic_fixture,AAA,FP.CPI.TOTL,2022,106.0,index (source-defined base; WDI publishes 2010=100),observed
+synthetic_fixture,AAA,FP.CPI.TOTL,2023,111.0,index (source-defined base; WDI publishes 2010=100),observed
+synthetic_fixture,AAA,FP.CPI.TOTL,2024,115.0,index (source-defined base; WDI publishes 2010=100),observed
+synthetic_fixture,AAA,FP.CPI.TOTL.ZG,2020,1.0,annual %,observed
+synthetic_fixture,AAA,FP.CPI.TOTL.ZG,2021,2.0,annual %,observed
+synthetic_fixture,AAA,FP.CPI.TOTL.ZG,2022,3.9,annual %,observed
+synthetic_fixture,AAA,FP.CPI.TOTL.ZG,2023,4.7,annual %,observed
+synthetic_fixture,AAA,FP.CPI.TOTL.ZG,2024,3.6,annual %,observed
+synthetic_fixture,AAA,NY.GDP.MKTP.KD.ZG,2020,-2.0,annual %,observed
+synthetic_fixture,AAA,NY.GDP.MKTP.KD.ZG,2021,3.0,annual %,observed
+synthetic_fixture,AAA,NY.GDP.MKTP.KD.ZG,2022,2.0,annual %,observed
+synthetic_fixture,AAA,NY.GDP.MKTP.KD.ZG,2023,1.0,annual %,observed
+synthetic_fixture,AAA,NY.GDP.MKTP.KD.ZG,2024,1.5,annual %,observed
+synthetic_fixture,BBB,FP.CPI.TOTL,2020,100.0,index (source-defined base; WDI publishes 2010=100),observed
+synthetic_fixture,BBB,FP.CPI.TOTL,2021,101.0,index (source-defined base; WDI publishes 2010=100),observed
+synthetic_fixture,BBB,FP.CPI.TOTL,2022,104.0,index (source-defined base; WDI publishes 2010=100),observed
+synthetic_fixture,BBB,FP.CPI.TOTL,2023,,index (source-defined base; WDI publishes 2010=100),null
+synthetic_fixture,BBB,FP.CPI.TOTL,2024,110.0,index (source-defined base; WDI publishes 2010=100),observed
+synthetic_fixture,BBB,FP.CPI.TOTL.ZG,2020,0.0,annual %,observed
+synthetic_fixture,BBB,FP.CPI.TOTL.ZG,2021,1.0,annual %,observed
+synthetic_fixture,BBB,FP.CPI.TOTL.ZG,2022,3.0,annual %,observed
+synthetic_fixture,BBB,FP.CPI.TOTL.ZG,2023,,annual %,null
+synthetic_fixture,BBB,FP.CPI.TOTL.ZG,2024,2.0,annual %,observed
+synthetic_fixture,BBB,NY.GDP.MKTP.KD.ZG,2020,-1.0,annual %,observed
+synthetic_fixture,BBB,NY.GDP.MKTP.KD.ZG,2021,4.0,annual %,observed
+synthetic_fixture,BBB,NY.GDP.MKTP.KD.ZG,2022,1.5,annual %,observed
+synthetic_fixture,BBB,NY.GDP.MKTP.KD.ZG,2023,0.0,annual %,observed
+synthetic_fixture,BBB,NY.GDP.MKTP.KD.ZG,2024,2.0,annual %,observed

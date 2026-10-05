@@ -1,0 +1,18 @@
+{
+  "slug": "economic-indicator-research-lab",
+  "cluster": "economic_research",
+  "title": "経済指標リサーチ・統計比較ラボ",
+  "summary": "自主制作。実質GDP成長率・インフレ率・CPIの整理、共通基準年への換算、観測値のみの記述統計、欠損検査、CSVと日本語レポート、出典管理。公開デモは架空の数値。",
+  "skills": [
+    "Python",
+    "経済統計",
+    "統計分析",
+    "市場調査",
+    "データ可視化",
+    "CSV",
+    "出典管理"
+  ],
+  "research_backed": true,
+  "reference_count": 3,
+  "data_policy": "synthetic_fixture"
+}
