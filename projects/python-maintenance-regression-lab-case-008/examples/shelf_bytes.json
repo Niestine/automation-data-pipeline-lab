@@ -1,0 +1,6 @@
+{
+  "name": "shelf.dat",
+  "sector_size": 8,
+  "old": "OLD-SHELF-v1-aaaaaaaa",
+  "new": "NEW-SHELF-PAYLOAD-v2-0123456789"
+}
