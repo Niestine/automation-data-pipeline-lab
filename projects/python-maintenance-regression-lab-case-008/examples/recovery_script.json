@@ -1,0 +1,21 @@
+{
+  "pages": {
+    "pageA": "base-A",
+    "pageB": "base-B",
+    "pageC": "base-C"
+  },
+  "steps": [
+    {"txn": "A", "op": "begin"},
+    {"txn": "A", "op": "update", "page": "pageA", "after": "A-committed"},
+    {"txn": "A", "op": "commit"},
+    {"txn": "B", "op": "begin"},
+    {"txn": "B", "op": "update", "page": "pageB", "after": "B-uncommitted"},
+    {"txn": "C", "op": "begin"},
+    {"txn": "C", "op": "update", "page": "pageC", "after": "keep-first"},
+    {"txn": "C", "op": "savepoint"},
+    {"txn": "C", "op": "update", "page": "pageC", "after": "drop-middle"},
+    {"txn": "C", "op": "rollback"},
+    {"txn": "C", "op": "update", "page": "pageC", "after": "keep-first+keep-third"},
+    {"txn": "C", "op": "commit"}
+  ]
+}

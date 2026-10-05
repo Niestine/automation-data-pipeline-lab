@@ -1,0 +1,90 @@
+{
+  "serial": {
+    "transactions": [
+      {"id": "T1", "status": "committed", "ops": [
+        {"op": "append", "key": "x", "tokens": ["a"], "value": ["a"]}
+      ]},
+      {"id": "T2", "status": "committed", "ops": [
+        {"op": "read", "key": "x", "value": ["a"]},
+        {"op": "append", "key": "x", "tokens": ["b"], "value": ["a", "b"]}
+      ]},
+      {"id": "T3", "status": "committed", "ops": [
+        {"op": "read", "key": "x", "value": ["a", "b"]}
+      ]}
+    ],
+    "surviving": {"x": ["a", "b"]}
+  },
+  "g1a": {
+    "transactions": [
+      {"id": "T1", "status": "aborted", "ops": [
+        {"op": "append", "key": "x", "tokens": ["a"], "value": ["a"]}
+      ]},
+      {"id": "T2", "status": "committed", "ops": [
+        {"op": "read", "key": "x", "value": ["a"]}
+      ]}
+    ],
+    "surviving": {"x": []}
+  },
+  "g1b": {
+    "transactions": [
+      {"id": "T1", "status": "committed", "ops": [
+        {"op": "append", "key": "x", "tokens": ["a"], "value": ["a"]},
+        {"op": "append", "key": "x", "tokens": ["b"], "value": ["a", "b"]}
+      ]},
+      {"id": "T2", "status": "committed", "ops": [
+        {"op": "read", "key": "x", "value": ["a"]}
+      ]}
+    ],
+    "surviving": {"x": ["a", "b"]}
+  },
+  "g0": {
+    "transactions": [
+      {"id": "T1", "status": "committed", "ops": [
+        {"op": "append", "key": "x", "tokens": ["a"], "value": ["a"]},
+        {"op": "append", "key": "y", "tokens": ["d"], "value": ["b", "d"]}
+      ]},
+      {"id": "T2", "status": "committed", "ops": [
+        {"op": "append", "key": "y", "tokens": ["b"], "value": ["b"]},
+        {"op": "append", "key": "x", "tokens": ["c"], "value": ["a", "c"]}
+      ]}
+    ],
+    "surviving": {"x": ["a", "c"], "y": ["b", "d"]}
+  },
+  "g1c": {
+    "transactions": [
+      {"id": "T1", "status": "committed", "ops": [
+        {"op": "append", "key": "x", "tokens": ["a"], "value": ["a"]},
+        {"op": "append", "key": "y", "tokens": ["c"], "value": ["b", "c"]}
+      ]},
+      {"id": "T2", "status": "committed", "ops": [
+        {"op": "read", "key": "x", "value": ["a"]},
+        {"op": "append", "key": "y", "tokens": ["b"], "value": ["b"]}
+      ]}
+    ],
+    "surviving": {"x": ["a"], "y": ["b", "c"]}
+  },
+  "g2": {
+    "transactions": [
+      {"id": "T1", "status": "committed", "ops": [
+        {"op": "read", "key": "x", "value": []},
+        {"op": "append", "key": "y", "tokens": ["p"], "value": ["p"]}
+      ]},
+      {"id": "T2", "status": "committed", "ops": [
+        {"op": "read", "key": "y", "value": []},
+        {"op": "append", "key": "x", "tokens": ["q"], "value": ["q"]}
+      ]}
+    ],
+    "surviving": {"x": ["q"], "y": ["p"]}
+  },
+  "unknown": {
+    "transactions": [
+      {"id": "T1", "status": "unknown", "ops": [
+        {"op": "append", "key": "x", "tokens": ["z"], "value": ["z"]}
+      ]},
+      {"id": "T2", "status": "committed", "ops": [
+        {"op": "read", "key": "x", "value": ["z"]}
+      ]}
+    ],
+    "surviving": {"x": []}
+  }
+}

@@ -21,6 +21,8 @@ The command writes normalized.json, normalized.csv, and summary.json.
 
 ## Portfolio Labs
 
+- **[Python Maintenance & Regression Lab — Case 008](projects/python-maintenance-regression-lab-case-008/)** — In-process crash and isolation lab that keeps committed page images, publish bytes, and a stock total intact across prefix cuts, savepoint rollback, and a write-locked decrement.
+
 - **[Python Maintenance & Regression Lab — Case 007](projects/python-maintenance-regression-lab-case-007/)** — Offline bay-hold desk that locks retry, backoff, and amplification repairs with fault injection and a virtual clock.
 
 - **[Python Maintenance & Regression Lab — Case 006](projects/python-maintenance-regression-lab-case-006/)** — Offline partner-note exchange that turns strict UTF-8 text into one Net-Unicode CSV byte profile on Windows and Linux.
