@@ -1,0 +1,7 @@
+﻿data_origin,country,indicator,label,unit,n_observed,n_expected,mean,median,stdev,min,min_year,max,max_year,annualized_change_percent
+synthetic_fixture,AAA,FP.CPI.TOTL,消費者物価指数,index (2020=100),5,5,106.8,106.0,6.2209,100.0,2020,115.0,2024,3.5558
+synthetic_fixture,AAA,FP.CPI.TOTL.ZG,インフレ率,annual %,5,5,3.04,3.6,1.5043,1.0,2020,4.7,2023,
+synthetic_fixture,AAA,NY.GDP.MKTP.KD.ZG,実質GDP成長率,annual %,5,5,1.1,1.5,1.8841,-2.0,2020,3.0,2021,
+synthetic_fixture,BBB,FP.CPI.TOTL,消費者物価指数,index (2020=100),4,5,103.75,102.5,4.5,100.0,2020,110.0,2024,2.4114
+synthetic_fixture,BBB,FP.CPI.TOTL.ZG,インフレ率,annual %,4,5,1.5,1.5,1.291,0.0,2020,3.0,2022,
+synthetic_fixture,BBB,NY.GDP.MKTP.KD.ZG,実質GDP成長率,annual %,5,5,1.3,1.5,1.9235,-1.0,2020,4.0,2021,

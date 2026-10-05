@@ -1,0 +1,2 @@
+# Keep generated outputs byte-exact so provenance.json snapshot_sha256 stays verifiable after checkout.
+demo/** -text

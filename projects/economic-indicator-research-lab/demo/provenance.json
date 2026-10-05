@@ -1,0 +1,25 @@
+{
+  "data_origin": "synthetic_fixture",
+  "snapshot_file": "raw_snapshot.json",
+  "snapshot_sha256": "58b856e2da862aa2d38d94ff6e4f1c61640dc1e24c948f2e5bc08d3e00488de9",
+  "fetched_at": null,
+  "provider_last_updated": null,
+  "request_urls": [],
+  "methodology_sources": [
+    [
+      "World Bank Indicator API Queries",
+      "https://datahelpdesk.worldbank.org/knowledgebase/articles/898599-indicator-api-queries"
+    ],
+    [
+      "World Bank API Basic Call Structures",
+      "https://datahelpdesk.worldbank.org/knowledgebase/articles/898581-api-basic-call-structures"
+    ],
+    [
+      "World Bank CPI metadata",
+      "https://databank.worldbank.org/metadataglossary/world-development-indicators/series/FP.CPI.TOTL"
+    ]
+  ],
+  "base_year": 2020,
+  "start": 2020,
+  "end": 2024
+}

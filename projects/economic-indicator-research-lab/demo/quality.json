@@ -1,0 +1,85 @@
+{
+  "missing": [
+    {
+      "country": "BBB",
+      "indicator": "FP.CPI.TOTL",
+      "year": 2023,
+      "reason": "null"
+    },
+    {
+      "country": "BBB",
+      "indicator": "FP.CPI.TOTL.ZG",
+      "year": 2023,
+      "reason": "null"
+    }
+  ],
+  "derived": {
+    "AAA": {
+      "cpi_rebased": {
+        "2020": 100.0,
+        "2021": 102.0,
+        "2022": 106.0,
+        "2023": 111.0,
+        "2024": 115.0
+      },
+      "cpi_yoy_percent": {
+        "2020": null,
+        "2021": 2.0,
+        "2022": 3.9216,
+        "2023": 4.717,
+        "2024": 3.6036
+      },
+      "inflation_change_pp": {
+        "2020": null,
+        "2021": 1.0,
+        "2022": 1.9,
+        "2023": 0.8,
+        "2024": -1.1
+      },
+      "published_minus_cpi_yoy_pp": {
+        "2020": null,
+        "2021": -0.0,
+        "2022": -0.0216,
+        "2023": -0.017,
+        "2024": -0.0036
+      },
+      "max_abs_published_minus_cpi_yoy_pp": 0.0216,
+      "cpi_annualized_change_percent": 3.5558
+    },
+    "BBB": {
+      "cpi_rebased": {
+        "2020": 100.0,
+        "2021": 101.0,
+        "2022": 104.0,
+        "2023": null,
+        "2024": 110.0
+      },
+      "cpi_yoy_percent": {
+        "2020": null,
+        "2021": 1.0,
+        "2022": 2.9703,
+        "2023": null,
+        "2024": null
+      },
+      "inflation_change_pp": {
+        "2020": null,
+        "2021": 1.0,
+        "2022": 2.0,
+        "2023": null,
+        "2024": null
+      },
+      "published_minus_cpi_yoy_pp": {
+        "2020": null,
+        "2021": -0.0,
+        "2022": 0.0297,
+        "2023": null,
+        "2024": null
+      },
+      "max_abs_published_minus_cpi_yoy_pp": 0.0297,
+      "cpi_annualized_change_percent": 2.4114
+    }
+  },
+  "expected_cells": 30,
+  "observed_cells": 28,
+  "base_year": 2020
+}
