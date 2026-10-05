@@ -1,0 +1,10 @@
+{
+  "schedule_id": "weekly-lane",
+  "slot_start": "2026-10-05T00:00:00Z",
+  "payload": {
+    "desk": "lane-a",
+    "rows": [
+      {"sku": "HAT01", "qty": 1, "bin": "A01"}
+    ]
+  }
+}

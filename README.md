@@ -21,6 +21,8 @@ The command writes normalized.json, normalized.csv, and summary.json.
 
 ## Portfolio Labs
 
+- **[Reliable Automation Job Runner Lab — Case 002](projects/automation-job-runner-lab-case-002/)** — Multi-process SQLite queue that leases one shift-slip export at a time, heartbeats a database-clock deadline, and fences every completion so a crashed or paused worker cannot apply the CSV twice.
+
 - **[API Integration Reliability Lab — Case 002](projects/api-integration-reliability-lab-case-002/)** — Offline quay-release inbox that verifies Standard Webhooks and Stripe-style signatures, claims each event once, and reconciles missed deliveries with a cursor.
 
 - **[LLM Agent Evaluation & Guardrails Lab — Case 004](projects/llm-agent-evaluation-lab-case-004/)** — Offline office-desk agent lab that fixes a plan before untrusted tool data is read, gates sends with capability checks and resumable approval, and scores replayable traces.

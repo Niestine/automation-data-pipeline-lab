@@ -1,0 +1,32 @@
+{
+  "jobs": [
+    {
+      "idempotency_key": "6f1c0c3e-8a1d-4e0b-9c2a-111111111111",
+      "payload": {
+        "desk": "lane-a",
+        "rows": [
+          {"sku": "HAT01", "qty": 2, "bin": "A01"}
+        ]
+      }
+    },
+    {
+      "idempotency_key": "6f1c0c3e-8a1d-4e0b-9c2a-222222222222",
+      "payload": {
+        "desk": "lane-a",
+        "rows": [
+          {"sku": "COAT7", "qty": 1, "bin": "B12"},
+          {"sku": "BELT3", "qty": 4, "bin": "C03"}
+        ]
+      }
+    },
+    {
+      "idempotency_key": "6f1c0c3e-8a1d-4e0b-9c2a-333333333333",
+      "payload": {
+        "desk": "lane-b",
+        "rows": [
+          {"sku": "SHOE9", "qty": 3, "bin": "D04"}
+        ]
+      }
+    }
+  ]
+}
