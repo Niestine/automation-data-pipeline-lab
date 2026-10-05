@@ -1,0 +1,22 @@
+{
+  "jobs": [
+    {
+      "operation_id": "BAY-1001",
+      "bay": "C-14",
+      "body": "HOLD C-14 40min",
+      "charge": "18.00"
+    },
+    {
+      "operation_id": "BAY-1002",
+      "bay": "C-15",
+      "body": "HOLD C-15 20min",
+      "charge": "9.00"
+    },
+    {
+      "operation_id": "BAY-1003",
+      "bay": "A-02",
+      "body": "HOLD A-02 15min",
+      "charge": "0.00"
+    }
+  ]
+}
