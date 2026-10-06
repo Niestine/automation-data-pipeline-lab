@@ -1,0 +1,11 @@
+[
+  {
+    "canonical_id": "P-100",
+    "supplier_id": "SUP1",
+    "sku": "HX-30",
+    "brand": "Acme",
+    "size": "M10",
+    "title": "Hex bolt zinc",
+    "organization": "Northwind"
+  }
+]
