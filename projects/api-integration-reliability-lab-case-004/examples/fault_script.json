@@ -1,0 +1,4 @@
+{
+  "drop_after_commit": false,
+  "precommit_failures": 1
+}

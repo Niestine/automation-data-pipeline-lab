@@ -1,0 +1,16 @@
+{
+  "title": "API Integration Reliability Lab — Case 004",
+  "summary": "Offline cold-lot grant lab that rotates refresh-token families, stops after a dropped refresh response, checkpoints sealed archive pages, and posts idempotent restock orders.",
+  "skills": [
+    "Python",
+    "REST API",
+    "webhooks",
+    "retries",
+    "pagination",
+    "idempotency",
+    "testing"
+  ],
+  "verification": "python -m unittest discover -s projects/api-integration-reliability-lab-case-004/tests -v",
+  "research_backed": true,
+  "reference_count": 10
+}
