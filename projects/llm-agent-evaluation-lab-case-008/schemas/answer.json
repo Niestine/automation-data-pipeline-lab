@@ -1,0 +1,54 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.com/fieldlog/answer.json",
+  "title": "Fieldlog answer",
+  "oneOf": [
+    {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["status", "entity", "episode_ids", "order_key"],
+      "properties": {
+        "status": {"const": "resolved"},
+        "entity": {"type": "string"},
+        "episode_ids": {
+          "type": "array",
+          "items": {"type": "string", "minLength": 1}
+        },
+        "order_key": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["kind", "value"],
+          "properties": {
+            "kind": {"enum": ["serial", "timestamp", "direct", "reduction"]},
+            "value": {"type": ["integer", "string"]}
+          }
+        }
+      }
+    },
+    {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["status", "reason"],
+      "properties": {
+        "status": {"const": "abstain"},
+        "reason": {"enum": ["empty_retrieval", "never_stated"]}
+      }
+    },
+    {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["status", "action", "missing_variable", "alternatives"],
+      "properties": {
+        "status": {"const": "unresolved"},
+        "action": {
+          "enum": ["commit", "conditionalize", "clarify", "verify", "defer", "reversible_trial"]
+        },
+        "missing_variable": {"type": "string"},
+        "alternatives": {
+          "type": "array",
+          "items": {"type": "string"}
+        }
+      }
+    }
+  ]
+}

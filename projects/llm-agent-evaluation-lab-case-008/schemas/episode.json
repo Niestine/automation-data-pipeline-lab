@@ -1,0 +1,31 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.com/fieldlog/episode.json",
+  "title": "Fieldlog episode",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "episode_id",
+    "session_id",
+    "actor",
+    "kind",
+    "text",
+    "reference_time",
+    "token_count",
+    "turn_index",
+    "user_id",
+    "user_scope"
+  ],
+  "properties": {
+    "episode_id": {"type": "string", "minLength": 1},
+    "session_id": {"type": "string", "minLength": 1},
+    "actor": {"enum": ["user", "assistant", "system"]},
+    "kind": {"enum": ["message", "text", "json"]},
+    "text": {"type": "string"},
+    "reference_time": {"type": "string", "minLength": 1},
+    "token_count": {"type": "integer", "minimum": 0},
+    "turn_index": {"type": "integer", "minimum": 0},
+    "user_id": {"type": "string", "minLength": 1},
+    "user_scope": {"type": "boolean"}
+  }
+}

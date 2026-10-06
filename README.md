@@ -21,6 +21,8 @@ The command writes normalized.json, normalized.csv, and summary.json.
 
 ## Portfolio Labs
 
+- **[LLM Agent Evaluation & Guardrails Lab — Case 008](projects/llm-agent-evaluation-lab-case-008/)** — Offline Ledgerlane field-station memory lab: bi-temporal facts, a bounded queue, code-resolved current values, and an explicit refusal to collapse irreducible conflicts into one answer.
+
 - **[LLM Agent Evaluation & Guardrails Lab — Case 007](projects/llm-agent-evaluation-lab-case-007/)** — Offline prompt-version regression gate for a synthetic curb-permit clerk: paired cluster-robust intervals, pass^k, and safety axes decide whether a golden-set change is promotable.
 
 - **[API Integration Reliability Lab — Case 004](projects/api-integration-reliability-lab-case-004/)** — Offline cold-lot grant lab that rotates refresh-token families, stops after a dropped refresh response, checkpoints sealed archive pages, and posts idempotent restock orders.
