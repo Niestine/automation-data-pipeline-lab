@@ -1,0 +1,60 @@
+{
+  "bucket": "b",
+  "decision_id": "D-dup-header",
+  "header": "present",
+  "decode_policy": "fatal",
+  "charset": "utf-8",
+  "field_limit": 4096,
+  "records": null,
+  "header_values": null,
+  "error_code": null,
+  "record_index": null,
+  "field_index": null,
+  "byte_offset": null,
+  "events": [],
+  "bom_stripped": false,
+  "legacy_decode_policy": "replacement",
+  "break_date": "2026-04-01",
+  "removal_condition": "Remove duplicate-name acceptance when every present header uses distinct names.",
+  "end_state": "reject",
+  "agreement": false,
+  "hardened": {
+    "error_code": "E-dup-header",
+    "decision_id": "D-dup-header",
+    "record_index": 0,
+    "field_index": 2,
+    "byte_offset": 8,
+    "records": null,
+    "header_values": null,
+    "events": [],
+    "bom_stripped": false
+  },
+  "legacy": {
+    "error_code": null,
+    "decision_id": null,
+    "record_index": null,
+    "field_index": null,
+    "byte_offset": null,
+    "records": [
+      [
+        "A",
+        "1",
+        "B"
+      ]
+    ],
+    "header_values": [
+      "sku",
+      "qty",
+      "sku"
+    ],
+    "events": [
+      {
+        "decision_id": "D-dup-header",
+        "record_index": 0,
+        "field_index": 2,
+        "byte_offset": 8
+      }
+    ],
+    "bom_stripped": false
+  }
+}

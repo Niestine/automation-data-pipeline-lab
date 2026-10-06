@@ -1,0 +1,27 @@
+{
+  "bucket": "c",
+  "decision_id": "D-crlf",
+  "header": "absent",
+  "decode_policy": "fatal",
+  "charset": "utf-8",
+  "field_limit": 4096,
+  "records": [
+    [
+      "k1",
+      "k2"
+    ],
+    [
+      "v1",
+      "v2"
+    ]
+  ],
+  "header_values": null,
+  "error_code": null,
+  "record_index": null,
+  "field_index": null,
+  "byte_offset": null,
+  "events": [],
+  "bom_stripped": false,
+  "agreement": true,
+  "conformance_oracle": false
+}

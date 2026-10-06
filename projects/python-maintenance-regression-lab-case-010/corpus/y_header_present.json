@@ -1,0 +1,26 @@
+{
+  "bucket": "y",
+  "decision_id": "D-header",
+  "header": "present",
+  "decode_policy": "fatal",
+  "charset": "utf-8",
+  "field_limit": 4096,
+  "records": [
+    [
+      "A1",
+      "2",
+      "N"
+    ]
+  ],
+  "header_values": [
+    "sku",
+    "qty",
+    "bin"
+  ],
+  "error_code": null,
+  "record_index": null,
+  "field_index": null,
+  "byte_offset": null,
+  "events": [],
+  "bom_stripped": false
+}
