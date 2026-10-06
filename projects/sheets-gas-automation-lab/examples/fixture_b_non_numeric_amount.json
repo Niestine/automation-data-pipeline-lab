@@ -1,0 +1,33 @@
+{
+  "id": "B",
+  "note": "One amount cell is text. The per-cell schema already fails.",
+  "expected_total_jpy": "15500",
+  "expected_row_count": 3,
+  "written_total_jpy": "10000",
+  "rows": [
+    {
+      "operation_id": "op-b-1",
+      "session_date": "2026-10-05",
+      "desk_code": "DESK-NORTH",
+      "hours": "2.5",
+      "rate_jpy_per_hour": "4000",
+      "amount_jpy": "10000"
+    },
+    {
+      "operation_id": "op-b-2",
+      "session_date": "2026-10-06",
+      "desk_code": "DESK-NORTH",
+      "hours": "1",
+      "rate_jpy_per_hour": "3500",
+      "amount_jpy": "TBD"
+    },
+    {
+      "operation_id": "op-b-3",
+      "session_date": "2026-10-07",
+      "desk_code": "DESK-SOUTH",
+      "hours": "0.5",
+      "rate_jpy_per_hour": "4000",
+      "amount_jpy": "2000"
+    }
+  ]
+}

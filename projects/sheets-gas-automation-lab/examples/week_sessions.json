@@ -1,0 +1,28 @@
+{
+  "billing_week": "2026-W41",
+  "expected_total_jpy": "15500",
+  "expected_row_count": 3,
+  "sessions": [
+    {
+      "operation_id": "0b1d9a2e-7c31-5a64-9e10-6c3a8f2d4b71",
+      "session_date": "2026-10-05",
+      "desk_code": "DESK-NORTH",
+      "hours": "2.5",
+      "rate_jpy_per_hour": "4000"
+    },
+    {
+      "operation_id": "1c2e0b3f-8d42-5b75-8f21-7d4b9a3e5c82",
+      "session_date": "2026-10-06",
+      "desk_code": "DESK-NORTH",
+      "hours": "1",
+      "rate_jpy_per_hour": "3500"
+    },
+    {
+      "operation_id": "2d3f1c40-9e53-5c86-9022-8e5c0b4f6d93",
+      "session_date": "2026-10-07",
+      "desk_code": "DESK-SOUTH",
+      "hours": "0.5",
+      "rate_jpy_per_hour": "4000"
+    }
+  ]
+}

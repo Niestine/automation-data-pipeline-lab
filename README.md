@@ -21,6 +21,8 @@ The command writes normalized.json, normalized.csv, and summary.json.
 
 ## Portfolio Labs
 
+- **[Google Sheets / Apps Script Automation Lab](projects/sheets-gas-automation-lab/)** — Offline session-fee sheet lab that checks declared dimensions and an independent week total, commits idempotent RAW batches, and documents Apps Script lock and quota boundaries without calling Google.
+
 - **[LLM Agent Evaluation & Guardrails Lab — Case 008](projects/llm-agent-evaluation-lab-case-008/)** — Offline Ledgerlane field-station memory lab: bi-temporal facts, a bounded queue, code-resolved current values, and an explicit refusal to collapse irreducible conflicts into one answer.
 
 - **[LLM Agent Evaluation & Guardrails Lab — Case 007](projects/llm-agent-evaluation-lab-case-007/)** — Offline prompt-version regression gate for a synthetic curb-permit clerk: paired cluster-robust intervals, pass^k, and safety axes decide whether a golden-set change is promotable.
