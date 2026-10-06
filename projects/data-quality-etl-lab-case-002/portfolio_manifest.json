@@ -1,0 +1,15 @@
+{
+  "title": "Data Quality ETL Lab — Case 002",
+  "summary": "Edition Gate replays a storeroom parts catalog through a schema registry that admits only backwards-compatible, publication-staged CSV ingests.",
+  "skills": [
+    "Python",
+    "ETL",
+    "CSV",
+    "data quality",
+    "validation",
+    "deduplication"
+  ],
+  "verification": "python -m unittest discover -s projects/data-quality-etl-lab-case-002/tests -v",
+  "research_backed": true,
+  "reference_count": 10
+}

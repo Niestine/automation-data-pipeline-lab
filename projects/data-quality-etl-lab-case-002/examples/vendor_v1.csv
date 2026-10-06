@@ -1,0 +1,6 @@
+supplier_id,sku,org_name,brand,size,title,pack_qty
+SUP1,HX-30,Northwind,Acme,M10,Hex bolt zinc,10
+SUP1,,Northwind,Acme,M10,Hex bolt zinc,4
+SUP3,FB-1,Northwind,Acme,M10,ﬁtting,2
+SUP9,ZZ-1,Contoso,Acme,M12,Widget,one
+SUP9,ZZ-2,Contoso,Acme,M12,Widget
