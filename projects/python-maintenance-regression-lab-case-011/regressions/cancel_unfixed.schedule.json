@@ -1,0 +1,63 @@
+{
+  "change_points": [],
+  "depth": 1,
+  "events": [
+    {
+      "args": [],
+      "i": 0,
+      "op": "register",
+      "thread": 1
+    },
+    {
+      "args": [],
+      "i": 1,
+      "op": "take_tasks",
+      "thread": 1
+    },
+    {
+      "args": [],
+      "i": 2,
+      "op": "cancel_begin",
+      "thread": 2
+    },
+    {
+      "args": [],
+      "i": 3,
+      "op": "process",
+      "thread": 1
+    },
+    {
+      "args": [],
+      "i": 4,
+      "op": "set_flag",
+      "thread": 2
+    },
+    {
+      "args": [],
+      "i": 5,
+      "op": "cancel_rest",
+      "thread": 2
+    }
+  ],
+  "failure": "Deadlock",
+  "invariant_id": "cancel_atomic",
+  "k_budget": 32,
+  "mode": "free",
+  "n_max": 8,
+  "preemption_bound": 2,
+  "priorities": {
+    "1": 5,
+    "2": 2,
+    "3": 6,
+    "4": 3,
+    "5": 1,
+    "6": 4,
+    "7": 8,
+    "8": 7
+  },
+  "scenario": "cancel_port",
+  "seed": 0,
+  "switch_interval": 1,
+  "trace_sha256": "6084eac17b58e4c3171fa905e401606feb5db5193bbf9307bb07f546e1be2400",
+  "variant": "unfixed"
+}

@@ -1,0 +1,53 @@
+{
+  "change_points": [],
+  "depth": 1,
+  "events": [
+    {
+      "args": [
+        "state",
+        "observed"
+      ],
+      "i": 0,
+      "op": "read",
+      "thread": 2
+    },
+    {
+      "args": [
+        "state",
+        1
+      ],
+      "i": 1,
+      "op": "write",
+      "thread": 1
+    },
+    {
+      "args": [],
+      "i": 2,
+      "op": "bc",
+      "thread": 3
+    },
+    {
+      "args": [],
+      "i": 3,
+      "op": "bc",
+      "thread": 4
+    }
+  ],
+  "failure": "Invariant",
+  "invariant_id": "ordering_d1",
+  "k_budget": 8,
+  "mode": "free",
+  "n_max": 4,
+  "preemption_bound": 0,
+  "priorities": {
+    "1": 3,
+    "2": 1,
+    "3": 2,
+    "4": 4
+  },
+  "scenario": "ordering_d1",
+  "seed": 0,
+  "switch_interval": 1,
+  "trace_sha256": "5589e4f86c9d5e1423366abf9cc58f1cb4d1c3987cce9e0d954819518cb690fb",
+  "variant": "unfixed"
+}

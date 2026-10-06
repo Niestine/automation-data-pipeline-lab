@@ -21,6 +21,8 @@ The command writes normalized.json, normalized.csv, and summary.json.
 
 ## Portfolio Labs
 
+- **[Python Maintenance & Regression Lab — Case 011](projects/python-maintenance-regression-lab-case-011/)** — Deterministic yield-point lab that replays GIL and free-threaded schedules, with epoch race checks and atomicity reduction for a layered in-process service.
+
 - **[Python Maintenance & Regression Lab — Case 010](projects/python-maintenance-regression-lab-case-010/)** — A legacy wharf intake CSV reader is replaced by a hardened recognizer, with a bucketed regression corpus and an explicit compatibility contract.
 
 - **[Data Quality ETL Lab](projects/data-quality-etl-lab/)** — Harbor Ledger seals a synthetic weekly apparel catalog through typed CSV normalization, four read-only error detectors, duplicate decisions, and a canonical anomaly digest.

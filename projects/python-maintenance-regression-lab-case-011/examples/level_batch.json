@@ -1,0 +1,8 @@
+{
+  "handler_level": 30,
+  "respect_handler_level": true,
+  "records": [
+    {"message": "tick-low", "level": 20},
+    {"message": "tick-high", "level": 40}
+  ]
+}
