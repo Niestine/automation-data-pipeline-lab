@@ -1,0 +1,14 @@
+{
+  "title": "Google Sheets / Apps Script Automation Lab",
+  "summary": "Offline session-fee sheet lab that checks declared dimensions and an independent week total, commits idempotent RAW batches, and documents Apps Script lock and quota boundaries without calling Google.",
+  "skills": [
+    "Google Apps Script",
+    "Google Sheets",
+    "Python",
+    "data validation",
+    "automation"
+  ],
+  "verification": "python -m unittest discover -s projects/sheets-gas-automation-lab/tests -v",
+  "research_backed": true,
+  "reference_count": 10
+}
