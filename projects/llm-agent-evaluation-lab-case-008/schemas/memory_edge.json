@@ -1,0 +1,41 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.com/fieldlog/memory-edge.json",
+  "title": "Fieldlog bi-temporal edge",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "edge_id",
+    "session_id",
+    "episode_id",
+    "subject",
+    "predicate",
+    "object",
+    "serial",
+    "t_valid",
+    "t_invalid",
+    "t_created",
+    "t_expired",
+    "source_label",
+    "status",
+    "span",
+    "context"
+  ],
+  "properties": {
+    "edge_id": {"type": "string", "minLength": 1},
+    "session_id": {"type": "string", "minLength": 1},
+    "episode_id": {"type": "string", "minLength": 1},
+    "subject": {"type": "string", "minLength": 1},
+    "predicate": {"type": "string", "minLength": 1},
+    "object": {"type": "string", "minLength": 1},
+    "serial": {"type": ["integer", "null"]},
+    "t_valid": {"type": ["string", "null"]},
+    "t_invalid": {"type": ["string", "null"]},
+    "t_created": {"type": "string", "minLength": 1},
+    "t_expired": {"type": ["string", "null"]},
+    "source_label": {"type": "string", "minLength": 1},
+    "status": {"enum": ["active", "closed", "unresolved"]},
+    "span": {"type": "string", "minLength": 1},
+    "context": {"type": ["string", "null"]}
+  }
+}
