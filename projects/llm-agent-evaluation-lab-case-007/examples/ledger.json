@@ -1,0 +1,16 @@
+{
+  "permits": {
+    "P-100": {
+      "holder": "resident-17",
+      "hold": false,
+      "status": "active",
+      "zone": "B"
+    },
+    "P-101": {
+      "holder": "resident-18",
+      "hold": false,
+      "status": "active",
+      "zone": "A"
+    }
+  }
+}

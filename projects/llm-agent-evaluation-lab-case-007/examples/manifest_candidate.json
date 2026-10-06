@@ -1,0 +1,52 @@
+{
+  "manifest_id": "candidate",
+  "provider_name": "fake-curb",
+  "request_model": "curb-script-1",
+  "response_model": "curb-script-1",
+  "temperature": 0.0,
+  "top_p": 1.0,
+  "seed_schedule": [
+    100
+  ],
+  "epochs": 1,
+  "reducer": "mean",
+  "pass_k": 1,
+  "headline_metric": "task_correct",
+  "headline_capability": "permit_decision",
+  "max_tokens": 256,
+  "prompt_name": "clerk.issue",
+  "prompt_version": "1.1.0",
+  "prompt_templates": {
+    "clerk.direct": "Decide the curb permit. State the reason before the answer.",
+    "clerk.polite": "Decide the curb permit. Write the reason, then the answer.",
+    "bundle.a": "Permit decision template A. Answer with the closed label.",
+    "bundle.b": "Permit decision template B. Answer with the closed label.",
+    "negation.v1": "Decide whether the curb report is clear. Answer with issue or refuse."
+  },
+  "schema_id": "curb.reason_v1",
+  "schema_key_order": [
+    "reason",
+    "answer"
+  ],
+  "declared_change": "prompt",
+  "alpha": 0.05,
+  "power": 0.8,
+  "delta": 0.05,
+  "harness_error_budget": 0.0,
+  "claimed_risk_tags": [
+    "confabulation",
+    "information integrity",
+    "information security",
+    "data privacy",
+    "human-AI configuration",
+    "harmful bias and homogenization",
+    "value chain and component integration"
+  ],
+  "change_kind": "improvement",
+  "output_type": "json",
+  "tool_policy_version": "allowlist.v1",
+  "max_actions": 8,
+  "max_retries": 2,
+  "reasoning_task_min": 0.5,
+  "classification_task_min": 0.5
+}
