@@ -1,0 +1,17 @@
+[
+  {
+    "name": "resident-17",
+    "clause": "is clear",
+    "label": "issue"
+  },
+  {
+    "name": "resident-18",
+    "clause": "is not clear",
+    "label": "refuse"
+  },
+  {
+    "name": "resident-19",
+    "clause": "is blocked",
+    "label": "refuse"
+  }
+]
