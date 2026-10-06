@@ -1,0 +1,16 @@
+{
+  "bucket": "n",
+  "decision_id": "D-empty",
+  "header": "absent",
+  "decode_policy": "fatal",
+  "charset": "utf-8",
+  "field_limit": 4096,
+  "records": null,
+  "header_values": null,
+  "error_code": "E-empty",
+  "record_index": null,
+  "field_index": null,
+  "byte_offset": 0,
+  "events": [],
+  "bom_stripped": false
+}

@@ -1,0 +1,16 @@
+{
+  "bucket": "i",
+  "decision_id": "D-ragged",
+  "header": "absent",
+  "decode_policy": "fatal",
+  "charset": "utf-8",
+  "field_limit": 4096,
+  "records": null,
+  "header_values": null,
+  "error_code": "E-ragged",
+  "record_index": 1,
+  "field_index": 1,
+  "byte_offset": 5,
+  "events": [],
+  "bom_stripped": false
+}

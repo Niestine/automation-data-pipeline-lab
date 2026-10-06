@@ -1,0 +1,61 @@
+{
+  "bucket": "b",
+  "decision_id": "D-quotes",
+  "header": "absent",
+  "decode_policy": "fatal",
+  "charset": "utf-8",
+  "field_limit": 4096,
+  "records": null,
+  "header_values": null,
+  "error_code": null,
+  "record_index": null,
+  "field_index": null,
+  "byte_offset": null,
+  "events": [],
+  "bom_stripped": false,
+  "legacy_decode_policy": "replacement",
+  "break_date": "2026-04-01",
+  "removal_condition": "Remove single-quote and backslash repairs when intake files use only doubled quotes.",
+  "end_state": "doubled-quote-only",
+  "agreement": false,
+  "hardened": {
+    "error_code": "E-single-quote",
+    "decision_id": "D-quotes",
+    "record_index": 0,
+    "field_index": 0,
+    "byte_offset": 0,
+    "records": null,
+    "header_values": null,
+    "events": [],
+    "bom_stripped": false
+  },
+  "legacy": {
+    "error_code": null,
+    "decision_id": null,
+    "record_index": null,
+    "field_index": null,
+    "byte_offset": null,
+    "records": [
+      [
+        "aaa",
+        "bbb"
+      ]
+    ],
+    "header_values": null,
+    "events": [
+      {
+        "decision_id": "D-quotes",
+        "record_index": 0,
+        "field_index": 0,
+        "byte_offset": 0
+      },
+      {
+        "decision_id": "D-quotes",
+        "record_index": 0,
+        "field_index": 1,
+        "byte_offset": 6
+      }
+    ],
+    "bom_stripped": false
+  }
+}

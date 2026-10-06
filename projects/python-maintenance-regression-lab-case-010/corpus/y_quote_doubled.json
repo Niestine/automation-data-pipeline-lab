@@ -1,0 +1,22 @@
+{
+  "bucket": "y",
+  "decision_id": "D-quotes",
+  "header": "absent",
+  "decode_policy": "fatal",
+  "charset": "utf-8",
+  "field_limit": 4096,
+  "records": [
+    [
+      "aaa",
+      "b\"bb",
+      "ccc"
+    ]
+  ],
+  "header_values": null,
+  "error_code": null,
+  "record_index": null,
+  "field_index": null,
+  "byte_offset": null,
+  "events": [],
+  "bom_stripped": false
+}

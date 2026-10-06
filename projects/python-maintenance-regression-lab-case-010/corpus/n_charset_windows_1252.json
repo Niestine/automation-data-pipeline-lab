@@ -1,0 +1,16 @@
+{
+  "bucket": "n",
+  "decision_id": "D-charset",
+  "header": "absent",
+  "decode_policy": "fatal",
+  "charset": "windows-1252",
+  "field_limit": 4096,
+  "records": null,
+  "header_values": null,
+  "error_code": "E-not-utf8",
+  "record_index": null,
+  "field_index": null,
+  "byte_offset": 0,
+  "events": [],
+  "bom_stripped": false
+}

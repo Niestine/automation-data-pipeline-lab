@@ -1,0 +1,59 @@
+{
+  "bucket": "b",
+  "decision_id": "D-crlf",
+  "header": "absent",
+  "decode_policy": "fatal",
+  "charset": "utf-8",
+  "field_limit": 4096,
+  "records": null,
+  "header_values": null,
+  "error_code": null,
+  "record_index": null,
+  "field_index": null,
+  "byte_offset": null,
+  "events": [],
+  "bom_stripped": false,
+  "legacy_decode_policy": "replacement",
+  "break_date": "2026-04-01",
+  "removal_condition": "Remove the bare-break repair when every intake file separates records with CRLF.",
+  "end_state": "reject-bare-break",
+  "agreement": false,
+  "hardened": {
+    "error_code": "E-bare-lf",
+    "decision_id": "D-crlf",
+    "record_index": 0,
+    "field_index": 1,
+    "byte_offset": 3,
+    "records": null,
+    "header_values": null,
+    "events": [],
+    "bom_stripped": false
+  },
+  "legacy": {
+    "error_code": null,
+    "decision_id": null,
+    "record_index": null,
+    "field_index": null,
+    "byte_offset": null,
+    "records": [
+      [
+        "p",
+        "q"
+      ],
+      [
+        "r",
+        "s"
+      ]
+    ],
+    "header_values": null,
+    "events": [
+      {
+        "decision_id": "D-crlf",
+        "record_index": 0,
+        "field_index": 1,
+        "byte_offset": 3
+      }
+    ],
+    "bom_stripped": false
+  }
+}

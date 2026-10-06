@@ -1,0 +1,14 @@
+{
+  "title": "Python Maintenance & Regression Lab — Case 010",
+  "summary": "A legacy wharf intake CSV reader is replaced by a hardened recognizer, with a bucketed regression corpus and an explicit compatibility contract.",
+  "skills": [
+    "Python",
+    "debugging",
+    "regression testing",
+    "compatibility",
+    "logging"
+  ],
+  "verification": "python -m unittest discover -s projects/python-maintenance-regression-lab-case-010/tests -v",
+  "research_backed": true,
+  "reference_count": 10
+}
