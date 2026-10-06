@@ -1,0 +1,31 @@
+{
+  "alarms": {
+    "client_id": "handheld-south",
+    "count": 3,
+    "id_prefix": "al",
+    "lot_prefix": "A",
+    "samples": [
+      {
+        "celsius": -19,
+        "id": "al-001",
+        "lot": "A-001",
+        "updated": 1
+      }
+    ]
+  },
+  "ledger": {
+    "client_id": "handheld-north",
+    "count": 120,
+    "id_prefix": "ex",
+    "lot_prefix": "L",
+    "page_size": 50,
+    "samples": [
+      {
+        "celsius": -19,
+        "id": "ex-001",
+        "lot": "L-001",
+        "updated": 1
+      }
+    ]
+  }
+}

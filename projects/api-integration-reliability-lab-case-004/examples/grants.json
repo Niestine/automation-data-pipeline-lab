@@ -1,0 +1,36 @@
+{
+  "clients": [
+    {
+      "audience": "lot-ledger",
+      "client_id": "handheld-north",
+      "client_type": "confidential",
+      "mode": "rotation",
+      "scope": "excursions.read orders.write",
+      "secret": "lab-secret-north"
+    },
+    {
+      "audience": "alarm-board",
+      "client_id": "handheld-south",
+      "client_type": "confidential",
+      "mode": "rotation",
+      "scope": "excursions.read",
+      "secret": "lab-secret-south"
+    },
+    {
+      "audience": "lot-ledger",
+      "client_id": "kiosk-public",
+      "client_type": "public",
+      "mode": "rotation",
+      "scope": "excursions.read orders.write"
+    },
+    {
+      "audience": "lot-ledger",
+      "client_id": "probe-bound",
+      "client_type": "public",
+      "mode": "sender_constraint",
+      "scope": "excursions.read",
+      "sender_key_id": "sender-probe-1"
+    }
+  ],
+  "issuer": "https://auth.coldlot.example"
+}
