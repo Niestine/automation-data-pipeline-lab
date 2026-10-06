@@ -1,0 +1,7 @@
+{
+  "port": "northline-spur-4",
+  "tasks": [
+    {"id": "scan-a", "cancelled": false},
+    {"id": "scan-b", "cancelled": false}
+  ]
+}

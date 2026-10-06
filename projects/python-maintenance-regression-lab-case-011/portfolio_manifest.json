@@ -1,0 +1,8 @@
+{
+  "title": "Python Maintenance & Regression Lab — Case 011",
+  "summary": "Deterministic yield-point lab that replays GIL and free-threaded schedules, with epoch race checks and atomicity reduction for a layered in-process service.",
+  "skills": ["Python", "debugging", "regression testing", "compatibility", "logging"],
+  "verification": "python -m unittest discover -s projects/python-maintenance-regression-lab-case-011/tests -v",
+  "research_backed": true,
+  "reference_count": 9
+}
